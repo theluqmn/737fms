@@ -3,6 +3,7 @@ import { displayEngine } from "../functions/displayEngine";
 import { frameComponent } from "../components/frame";
 import { functionComponent } from "../components/functions";
 import Alphabetical from "../components/alphabetical";
+import Numerical from "../components/numerical";
 
 export default function FMS(k) {
     k.scene("fms", () => {
@@ -22,5 +23,6 @@ export default function FMS(k) {
         displayComponent(k);
         displayEngine(k);
         Alphabetical(k);
+        Numerical(k);
     });
 };

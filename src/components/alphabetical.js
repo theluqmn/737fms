@@ -29,13 +29,18 @@ export default function Alphabetical(k) {
     button(k, 372, 772, "W");
     button(k, 425, 772, "X");
     button(k, 478, 772, "Y");
-    button(k, 478, 772, "Z");
+
     // row 6
+    button(k, 266, 820, "Z");
+    button(k, 319, 820, "SP");
+    button(k, 372, 820, "DEL");
+    button(k, 425, 820, "/");
     button(k, 478, 820, "CLR");
 }
 
 function button(k, x, y, textInput, onClick) {
-    let size = 20;
+    let size = 22;
+    let adjust = 10;
 
     const button = k.add([
         k.rect(38, 38, {
@@ -53,12 +58,15 @@ function button(k, x, y, textInput, onClick) {
     switch (textInput) {
         case "CLR":
             size = 15;
+            adjust = 12;
             break;
         case "DEL":
             size = 15;
+            adjust = 12;
             break;
         case "SP":
             size = 15;
+            adjust = 12;
             break;
     }
 
@@ -69,7 +77,7 @@ function button(k, x, y, textInput, onClick) {
             width: 56,
             align: "center"
         }),
-        k.pos(x, y + 10),
+        k.pos(x, y + adjust),
         k.color(255,255,255),
         k.anchor("top"),
         k.scale(1)
