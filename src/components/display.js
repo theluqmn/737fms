@@ -1,3 +1,5 @@
+import { displayButton } from "./buttons";
+
 export function displayComponent(k) {
     const frame = k.add([
         k.rect(400, 340, {
@@ -31,7 +33,8 @@ export function displayComponent(k) {
     const l5 = displayButton(k, "left", 80, 360);
     const textLeftPrimary5 = displayText(k, "left", "primary", 360, "left", "TEXT");
     const l6 = displayButton(k, "left", 80, 400);
-    const textLeftPrimary6 = displayText(k, "left", "primary", 400, "left", "TEXT");
+    const textLeftPrimary6 = displayText(k, "left", "primary", 400, "left", "<INIT");
+    const textLeftSecondary6 = displayText(k, "left", "secondary", 400, "left", "-----------------");
 
     // right side
     const r1 = displayButton(k, "right", 520, 200);
@@ -41,54 +44,6 @@ export function displayComponent(k) {
     const r4 = displayButton(k, "right", 520, 320);
     const r5 = displayButton(k, "right", 520, 360);
     const r6 = displayButton(k, "right", 520, 400);
-}
-
-function displayButton(k, side, x, y, onClick) {
-    const button = k.add([
-        k.rect(28, 20),
-        k.pos(x, y),
-        k.color(10,10,10),
-        k.anchor("top"),
-        k.area(),
-        k.scale(1),
-        "button"
-    ]);
-
-    const highlight = k.add([
-        k.rect(22, 2),
-        k.pos(x, y + 10),
-        k.color(225,225,225),
-        k.anchor("center"),
-        k.scale(1),
-    ]);
-
-    if (side === "left") {
-        const line = k.add([
-            k.rect(18, 2),
-            k.pos(x + 30, y + 10),
-            k.color(125,125,125),
-            k.anchor("center")
-        ]);
-    } else if (side === "right") {
-        const line = k.add([
-            k.rect(18, 2),
-            k.pos(x - 30, y + 10),
-            k.color(125,125,125),
-            k.anchor("center")
-        ]);
-    }
-
-    button.onClick(() => {
-        button.scaleTo(0.95);
-        highlight.scaleTo(0.95);
-        setTimeout(() => {
-            button.scaleTo(1);
-            highlight.scaleTo(1);
-            if (onClick) onClick(); // Run the callback function if it's provided
-        }, 100);
-    });
-
-    return button;
 }
 
 function displayText(k, side, type, pos, align, textInput) {
