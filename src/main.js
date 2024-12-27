@@ -8,4 +8,4 @@ import FMS from "./scenes/fms";
 Intro(k);
 FMS(k);
 
-k.go("intro");
+k.go("fms");

@@ -46,24 +46,36 @@ function displayComponent(k) {
         k.color(0,0,0),
         k.anchor("top")
     ]);
+
+    // left side
+    selectButton(k, 80, 215);
+    selectButton(k, 80, 255);
+    selectButton(k, 80, 295);
+    selectButton(k, 80, 335);
+    selectButton(k, 80, 375);
+    selectButton(k, 80, 415);
+
+    // right side
+    selectButton(k, 520, 215);
+    selectButton(k, 520, 255);
+    selectButton(k, 520, 295);
+    selectButton(k, 520, 335);
+    selectButton(k, 520, 375);
+    selectButton(k, 520, 415);
 }
 
-function selectButton(k, text, x, y) {
-    const buttonFrame = k.add([
-        k.rect(80, 50),
+function selectButton(k, x, y) {
+    const button = k.add([
+        k.rect(28, 20),
         k.pos(x, y),
-        k.color(255,255,255),
+        k.color(10,10,10),
         k.anchor("top")
     ]);
 
-    const buttonText = k.add([
-        k.text(text, {
-            font: "arial",
-            size: 30,
-            width: 80
-        }),
-        k.pos(x, y),
-        k.color(0,0,0),
-        k.anchor("top")
-    ]);
+    const highlight = k.add([
+        k.rect(24, 2),
+        k.pos(x, y + 10),
+        k.color(255,255,255),
+        k.anchor("center")
+    ])
 }
