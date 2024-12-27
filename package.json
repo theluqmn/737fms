@@ -1,0 +1,17 @@
+{
+	"name": "737fms",
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite",
+		"preview": "vite preview",
+		"zip": "npm run build && mkdir -p dist && zip -r dist/game.zip dist -x \"**/.DS_Store\""
+	},
+	"dependencies": {
+		"kaplay": "^3001.0.5"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.2",
+		"vite": "^6.0.6"
+	}
+}
