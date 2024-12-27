@@ -17,13 +17,14 @@ export function displayComponent(k) {
     const l1 = displayButton(k, 80, 210, () => {
         console.log("left 1");
     });
-    const d1 = displayText(k, 125, 210, "PERF", "right");
+    const d1 = displayText(k, 125, 170, "PERF", "right");
+    const d2 = displayText(k, 125, 190, "  GW/CRZ CG", "left");
     const l2 = displayButton(k, 80, 250);
     const l3 = displayButton(k, 80, 290);
     const l4 = displayButton(k, 80, 330);
     const l5 = displayButton(k, 80, 370);
     const l6 = displayButton(k, 80, 410);
-    const d2 = displayText(k, 125, 410, "< INDEX");
+    const d3 = displayText(k, 125, 410, "< INDEX");
 
     // right side
     const r1 = displayButton(k, 520, 210);
