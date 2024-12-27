@@ -5,7 +5,7 @@ import { functionComponent } from "../components/functions";
 export default function FMS(k) {
     k.scene("fms", () => {
         k.add([
-            k.text("proudly made with kaplayjs", {
+            k.text("proudly made using kaplayjs", {
                 font: "arial",
                 size: 18,
                 width: 500
