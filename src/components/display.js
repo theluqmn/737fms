@@ -14,22 +14,24 @@ export function displayComponent(k) {
     ]);
 
     // left side
-    const l1 = displayButton(k, 80, 215, () => {
+    const l1 = displayButton(k, 80, 210, () => {
         console.log("left 1");
     });
-    const l2 = displayButton(k, 80, 255);
-    const l3 = displayButton(k, 80, 295);
-    const l4 = displayButton(k, 80, 335);
-    const l5 = displayButton(k, 80, 375);
-    const l6 = displayButton(k, 80, 415);
+    const d1 = displayText(k, 125, 210, "PERF", "right");
+    const l2 = displayButton(k, 80, 250);
+    const l3 = displayButton(k, 80, 290);
+    const l4 = displayButton(k, 80, 330);
+    const l5 = displayButton(k, 80, 370);
+    const l6 = displayButton(k, 80, 410);
+    const d2 = displayText(k, 125, 410, "< INDEX");
 
     // right side
-    const r1 = displayButton(k, 520, 215);
-    const r2 = displayButton(k, 520, 255);
-    const r3 = displayButton(k, 520, 295);
-    const r4 = displayButton(k, 520, 335);
-    const r5 = displayButton(k, 520, 375);
-    const r6 = displayButton(k, 520, 415);
+    const r1 = displayButton(k, 520, 210);
+    const r2 = displayButton(k, 520, 250);
+    const r3 = displayButton(k, 520, 290);
+    const r4 = displayButton(k, 520, 330);
+    const r5 = displayButton(k, 520, 370);
+    const r6 = displayButton(k, 520, 410);
 }
 
 function displayButton(k, x, y, onClick) {
@@ -62,4 +64,20 @@ function displayButton(k, x, y, onClick) {
     });
 
     return button;
+}
+
+function displayText(k, x, y, text, align = "left") {
+    const textComponent = k.add([
+        k.text(text, {
+            font: "consolas",
+            size: 20,
+            width: 170,
+            align: align
+        }),
+        k.pos(x, y),
+        k.color(255,255,255),
+        k.anchor("topleft")
+    ]);
+
+    return textComponent;
 }
