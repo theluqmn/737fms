@@ -69,13 +69,30 @@ function displayButton(k, x, y) {
         k.rect(28, 20),
         k.pos(x, y),
         k.color(10,10,10),
-        k.anchor("top")
+        k.anchor("top"),
+        k.area(),
+        k.scale(1),
+        // Add a unique identifier component
+        "button"
     ]);
 
     const highlight = k.add([
-        k.rect(24, 2),
+        k.rect(22, 2),
         k.pos(x, y + 10),
-        k.color(255,255,255),
-        k.anchor("center")
-    ])
+        k.color(225,225,225),
+        k.anchor("center"),
+        k.scale(1),
+    ]);
+
+    // Use onClick instead of onMouseDown/Release for this specific button only
+    button.onClick(() => {
+        button.scaleTo(0.95);
+        highlight.scaleTo(0.95);
+        setTimeout(() => {
+            button.scaleTo(1);
+            highlight.scaleTo(1);
+        }, 100);
+    });
+
+    return button;
 }
