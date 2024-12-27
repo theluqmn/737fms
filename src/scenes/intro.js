@@ -57,5 +57,24 @@ export default function Intro(k) {
             k.color(0, 0, 0),
             k.anchor("top")
         ]);
+
+        const githubButton = k.add([
+            k.rect(500, 50),
+            k.pos(k.width() / 2, 620),
+            k.color(255, 255, 255),
+            k.anchor("top")
+        ]);
+
+        const githubText = k.add([
+            k.text("GitHub", {
+                font: "arial",
+                size: 30,
+                width: 500,
+                align: "center"
+            }),
+            k.pos(k.width() / 2, 635),
+            k.color(0, 0, 0),
+            k.anchor("top")
+        ]);
     });
 }
