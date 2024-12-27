@@ -1,4 +1,5 @@
 import { displayButton } from "./buttons";
+import { displayContents } from "../functions/displayEngine";
 
 export function displayComponent(k) {
     const frame = k.add([
@@ -20,30 +21,32 @@ export function displayComponent(k) {
     ]);
 
     // left side
-    const buttonLeft1 = displayButton(k, "left", 80, 200);
-    const textLeftPrimary1 = displayText(k, "left", "primary", 200, "left", "TEST");
-    const textLeftSecondary1 = displayText(k, "left", "secondary", 200, "left", "SECONDARY");
+    const buttonLeft1 = displayButton(k, "left", 80, 200, () => {
+        displayContents.title = "TEST";
+    });
+    // const textLeftPrimary1 = displayText(k, "left", "primary", 200, "left", "TEST");
+    // const textLeftSecondary1 = displayText(k, "left", "secondary", 200, "left", "SECONDARY");
 
     const buttonLeft2 = displayButton(k, "left", 80, 240);
-    const textLeftPrimary2 = displayText(k, "left", "primary", 240, "left", "<DISCORD");
-    const textLeftSecondary2 = displayText(k, "left", "secondary", 240, "left", "SOCIAL MEDIA");
+    // const textLeftPrimary2 = displayText(k, "left", "primary", 240, "left", "<DISCORD");
+    // const textLeftSecondary2 = displayText(k, "left", "secondary", 240, "left", "SOCIAL MEDIA");
 
     const buttonLeft3 = displayButton(k, "left", 80, 280);
-    const textLeftPrimary3 = displayText(k, "left", "primary", 280, "left", "<HIGHSEAS");
+    // const textLeftPrimary3 = displayText(k, "left", "primary", 280, "left", "<HIGHSEAS");
 
     const buttonLeft4 = displayButton(k, "left", 80, 320);
-    const textLeftPrimary4 = displayText(k, "left", "primary", 320, "left", "TEXT");
+    // const textLeftPrimary4 = displayText(k, "left", "primary", 320, "left", "TEXT");
 
     const buttonLeft5 = displayButton(k, "left", 80, 360);
-    const textLeftPrimary5 = displayText(k, "left", "primary", 360, "left", "TEXT");
+    // const textLeftPrimary5 = displayText(k, "left", "primary", 360, "left", "TEXT");
 
     const buttonLeft6 = displayButton(k, "left", 80, 400);
-    const textLeftPrimary6 = displayText(k, "left", "primary", 400, "left", "<INIT");
-    const textLeftSecondary6 = displayText(k, "left", "secondary", 400, "left", "-----------------");
+    // const textLeftPrimary6 = displayText(k, "left", "primary", 400, "left", "<INIT");
+    // const textLeftSecondary6 = displayText(k, "left", "secondary", 400, "left", "-----------------");
 
     // right side
     const r1 = displayButton(k, "right", 520, 200);
-    const displayRight1 = displayText(k, "right", "primary", 200, "right", "TEXT");
+    // const displayRight1 = displayText(k, "right", "primary", 200, "right", "TEXT");
     const r2 = displayButton(k, "right", 520, 240);
     const r3 = displayButton(k, "right", 520, 280);
     const r4 = displayButton(k, "right", 520, 320);
@@ -54,13 +57,17 @@ export function displayComponent(k) {
 export function displayText(k, side, type, pos, align, textInput) {
     let size;
     let x;
+    let width = 180;
 
-    if (type == "primary") {
+    if (type == "text") {
         size = 20;
-    } else if (type == "secondary") {
+    } else if (type == "heading") {
         size = 18;
         pos -= 15;
-    };
+    } else if (type == "main") {
+        size = 20;
+        width = 340;
+    }
 
     if (side == "left") {
         x = 130;
@@ -72,7 +79,7 @@ export function displayText(k, side, type, pos, align, textInput) {
         k.text(textInput, {
             font: "consolas",
             size: size,
-            width: 180,
+            width: width,
             align: align
         }),
         k.pos(x, pos),
@@ -82,4 +89,6 @@ export function displayText(k, side, type, pos, align, textInput) {
     if (type == "secondary") {
         text.color = k.rgb(225,225,225);
     }
+
+    return text;
 };
