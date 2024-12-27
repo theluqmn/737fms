@@ -18,11 +18,15 @@ export function displayComponent(k) {
         console.log("left 1");
     });
     const d1 = displayTextPrimary(k, 125, 160, "PERF", "right");
+
     const l2 = displayButton(k, 80, 240);
     const d2 = displayTextSecondary(k, 125, 180, "  GW/CRZ CG", "left");
     const d3 = displayTextPrimary(k, 125, 200, "158.9/19.1%");
+    displayButtonLine(k, 110, 200);
     const l3 = displayButton(k, 80, 280);
+    displayButtonLine(k, 110, 240);
     const l4 = displayButton(k, 80, 320);
+    displayButtonLine(k, 110, 280);
     const l5 = displayButton(k, 80, 360);
     const l6 = displayButton(k, 80, 400);
     const d4 = displayTextPrimary(k, 125, 400, "< INDEX");
@@ -66,6 +70,15 @@ function displayButton(k, x, y, onClick) {
     });
 
     return button;
+}
+
+function displayButtonLine(k, x, y) {
+    const line = k.add([
+        k.rect(18, 2),
+        k.pos(x, y + 10),
+        k.color(125,125,125),
+        k.anchor("center")
+    ]);
 }
 
 function displayTextPrimary(k, x, y, text, align = "left") {
