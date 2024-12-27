@@ -18,48 +18,27 @@ export function displayComponent(k) {
     ]);
 
     // left side
-    const l1 = displayButton(k, 80, 200, () => {
+    const l1 = displayButton(k, "left", 80, 200, () => {
         console.log("left 1");
     });
-    const ml1 = displayButtonLine(k, 110, 200);
     const d1 = displayTextPrimary(k, 125, 160, "PERF", "right");
 
-    const l2 = displayButton(k, 80, 240);
-    const ml2 = displayButtonLine(k, 110, 240);
-
-    const l3 = displayButton(k, 80, 280);
-    const ml3 = displayButtonLine(k, 110, 280);
-
-    const l4 = displayButton(k, 80, 320);
-    const ml4 = displayButtonLine(k, 110, 320);
-
-    const l5 = displayButton(k, 80, 360);
-    const ml5 = displayButtonLine(k, 110, 360);
-
-    const l6 = displayButton(k, 80, 400);
-    const ml6 = displayButtonLine(k, 110, 400);
+    const l2 = displayButton(k, "left", 80, 240, );
+    const l3 = displayButton(k, "left", 80, 280);
+    const l4 = displayButton(k, "left",80, 320);
+    const l5 = displayButton(k, "left",80, 360);
+    const l6 = displayButton(k, "left",80, 400);
 
     // right side
-    const r1 = displayButton(k, 520, 210);
-    const mr1 = displayButtonLine(k, 490, 210);
-
-    const r2 = displayButton(k, 520, 250);
-    const mr2 = displayButtonLine(k, 490, 250);
-
-    const r3 = displayButton(k, 520, 290);
-    const mr3 = displayButtonLine(k, 490, 290);
-
-    const r4 = displayButton(k, 520, 330);
-    const mr4 = displayButtonLine(k, 490, 330);
-
-    const r5 = displayButton(k, 520, 370);
-    const mr5 = displayButtonLine(k, 490, 370);
-    
-    const r6 = displayButton(k, 520, 410);
-    const mr6 = displayButtonLine(k, 490, 410);
+    const r1 = displayButton(k, "right", 520, 200);
+    const r2 = displayButton(k, "right", 520, 240);
+    const r3 = displayButton(k, "right", 520, 280);
+    const r4 = displayButton(k, "right", 520, 320);
+    const r5 = displayButton(k, "right", 520, 360);
+    const r6 = displayButton(k, "right", 520, 400);
 }
 
-function displayButton(k, x, y, onClick) {
+function displayButton(k, side, x, y, onClick) {
     const button = k.add([
         k.rect(28, 20),
         k.pos(x, y),
@@ -77,6 +56,22 @@ function displayButton(k, x, y, onClick) {
         k.anchor("center"),
         k.scale(1),
     ]);
+
+    if (side === "left") {
+        const line = k.add([
+            k.rect(18, 2),
+            k.pos(x + 30, y + 10),
+            k.color(125,125,125),
+            k.anchor("center")
+        ]);
+    } else if (side === "right") {
+        const line = k.add([
+            k.rect(18, 2),
+            k.pos(x - 30, y + 10),
+            k.color(125,125,125),
+            k.anchor("center")
+        ]);
+    }
 
     button.onClick(() => {
         button.scaleTo(0.95);
