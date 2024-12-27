@@ -14,7 +14,7 @@ A web-based simulator of the Boeing 737-800's flight management system (FMS). Th
 - scenes
   - [x] intro
   - [ ] pre-flight
-  - [ ] fms
+  - [x] fms
 - frame
   - [ ] FMS UI
   - [ ] buttons
