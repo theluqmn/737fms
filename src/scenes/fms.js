@@ -1,4 +1,5 @@
 import { displayComponent } from "../components/display";
+import { frameComponent } from "../components/frame";
 
 export default function FMS(k) {
     k.scene("fms", () => {
@@ -16,20 +17,4 @@ export default function FMS(k) {
         frameComponent(k);
         displayComponent(k);
     });
-};
-
-function frameComponent(k) {
-    const frame = k.add([
-        k.rect(500, 800),
-        k.pos(300, 100),
-        k.color(20,20,20),
-        k.anchor("top")
-    ]);
-
-    const plate = k.add([
-        k.rect(480, 780),
-        k.pos(300, 110),
-        k.color(30,30,30),
-        k.anchor("top")
-    ]);
 };
