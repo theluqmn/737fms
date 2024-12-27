@@ -66,13 +66,32 @@ export default function Intro(k) {
         ]);
 
         const githubText = k.add([
-            k.text("GitHub", {
+            k.text("GitHub Repository", {
                 font: "arial",
                 size: 30,
                 width: 500,
                 align: "center"
             }),
             k.pos(k.width() / 2, 635),
+            k.color(0, 0, 0),
+            k.anchor("top")
+        ]);
+
+        const tutorialButton = k.add([
+            k.rect(500, 50),
+            k.pos(k.width() / 2, 680),
+            k.color(255, 255, 255),
+            k.anchor("top")
+        ]);
+
+        const tutorialText = k.add([
+            k.text("YouTube Tutorial", {
+                font: "arial",
+                size: 30,
+                width: 500,
+                align: "center"
+            }),
+            k.pos(k.width() / 2, 695),
             k.color(0, 0, 0),
             k.anchor("top")
         ]);
