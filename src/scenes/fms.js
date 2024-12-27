@@ -48,23 +48,23 @@ function displayComponent(k) {
     ]);
 
     // left side
-    selectButton(k, 80, 215);
-    selectButton(k, 80, 255);
-    selectButton(k, 80, 295);
-    selectButton(k, 80, 335);
-    selectButton(k, 80, 375);
-    selectButton(k, 80, 415);
+    const l1 = displayButton(k, 80, 215);
+    const l2 = displayButton(k, 80, 255);
+    const l3 = displayButton(k, 80, 295);
+    const l4 = displayButton(k, 80, 335);
+    const l5 = displayButton(k, 80, 375);
+    const l6 = displayButton(k, 80, 415);
 
     // right side
-    selectButton(k, 520, 215);
-    selectButton(k, 520, 255);
-    selectButton(k, 520, 295);
-    selectButton(k, 520, 335);
-    selectButton(k, 520, 375);
-    selectButton(k, 520, 415);
+    const r1 = displayButton(k, 520, 215);
+    const r2 = displayButton(k, 520, 255);
+    const r3 = displayButton(k, 520, 295);
+    const r4 = displayButton(k, 520, 335);
+    const r5 = displayButton(k, 520, 375);
+    const r6 = displayButton(k, 520, 415);
 }
 
-function selectButton(k, x, y) {
+function displayButton(k, x, y) {
     const button = k.add([
         k.rect(28, 20),
         k.pos(x, y),
