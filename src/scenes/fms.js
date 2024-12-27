@@ -10,8 +10,8 @@ export default function FMS(k) {
                 size: 18,
                 width: 500
             }),
-            k.pos(300, 5),
-            k.color(0,0,0),
+            k.pos(300, 910),
+            k.color(125,125,125),
             k.anchor("top")
         ]);
 
