@@ -51,7 +51,7 @@ export function displayComponent(k) {
     const r6 = displayButton(k, "right", 520, 400);
 }
 
-function displayText(k, side, type, pos, align, textInput) {
+export function displayText(k, side, type, pos, align, textInput) {
     let size;
     let x;
 
