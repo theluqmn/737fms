@@ -3,11 +3,11 @@ export default function FMS(k) {
         k.add([
             k.text("proudly made with kaplayjs", {
                 font: "arial",
-                size: 15,
+                size: 18,
                 width: 500
             }),
-            k.pos(300, 20),
-            k.color(125,125,125),
+            k.pos(300, 5),
+            k.color(0,0,0),
             k.anchor("top")
         ]);
 
