@@ -1,9 +1,18 @@
 export function functionComponent(k) {
     const frame1 = k.add([
-        k.rect(420, 340, {
+        k.rect(420, 82, {
             radius: 6
         }),
         k.pos(300, 480),
+        k.color(25,25,25),
+        k.anchor("top")
+    ]);
+
+    const frame2 = k.add([
+        k.rect(138, 164, {
+            radius: 6
+        }),
+        k.pos(159, 480),
         k.color(25,25,25),
         k.anchor("top")
     ]);

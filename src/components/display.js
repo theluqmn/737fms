@@ -6,7 +6,7 @@ export function displayComponent(k) {
             radius: 20
         }),
         k.pos(300, 130),
-        k.color(25,25,25),
+        k.color(15,15,15),
         k.anchor("top")
     ]);
 
