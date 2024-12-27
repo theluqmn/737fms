@@ -9,7 +9,6 @@ export default function Intro(k) {
             k.pos(k.width() / 2, 50),
             k.anchor("top")
         ])
-
         const descriptionn = k.add([
             k.text("A web-based simulator of the Boeing 737-800's flight management system (FMS). Not affliated with Boeing, this is a project for educational purposes only.", {
                 font: "arial",
@@ -27,7 +26,6 @@ export default function Intro(k) {
             k.color(241,196,15),
             k.anchor("top")
         ]);
-
         const noticeText = k.add([
             k.text("This project is optimised only for 16:9 (laptop/desktop) displays and is not designed with mobile friendliness in mind.", {
                 font: "arial",
@@ -45,7 +43,6 @@ export default function Intro(k) {
             k.color(255, 255, 255),
             k.anchor("top")
         ]);
-
         const startText = k.add([
             k.text("Start", {
                 font: "arial",
@@ -64,7 +61,6 @@ export default function Intro(k) {
             k.color(255, 255, 255),
             k.anchor("top")
         ]);
-
         const githubText = k.add([
             k.text("GitHub Repository", {
                 font: "arial",
@@ -83,7 +79,6 @@ export default function Intro(k) {
             k.color(255, 255, 255),
             k.anchor("top")
         ]);
-
         const tutorialText = k.add([
             k.text("YouTube Tutorial", {
                 font: "arial",

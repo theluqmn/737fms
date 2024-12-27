@@ -11,6 +11,10 @@ A web-based simulator of the Boeing 737-800's flight management system (FMS). Th
 ### Features
 
 - [x] kaplay setup
+- scenes
+  - [x] intro
+  - [ ] pre-flight
+  - [ ] fms
 - frame
   - [ ] FMS UI
   - [ ] buttons
