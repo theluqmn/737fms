@@ -15,7 +15,7 @@ const kaplayCongrats = () => {
 
 export default defineConfig({
     // index.html out file will start with a relative path for script
-    base: "./",
+    base: "/737fms/",
     server: {
         port: 3001,
     },
