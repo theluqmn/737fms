@@ -2,7 +2,9 @@
 
 **Designed and developed by** [Luqman](https://theluqmn.github.io)
 
-A web-based simulator of the Boeing 737-800's flight management system (FMS). Mobile friendly. This project is one of my submissions to the [2024/2025 High Seas](https://highseas.hackclub.com/) event by [Hack Club](https://hackclub.com/).
+→ [Demo](https://theluqmn.github.io/737fms/)
+
+A web-based simulator of the Boeing 737-800's flight management system (FMS). This project is one of my submissions to the [2024/2025 High Seas](https://highseas.hackclub.com/) event by [Hack Club](https://hackclub.com/).
 
 ## To-Do
 
