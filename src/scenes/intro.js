@@ -29,7 +29,7 @@ export default function Intro(k) {
             k.anchor("top")
         ]);
         const noticeText = k.add([
-            k.text("This project is optimised only for 16:9 (laptop/desktop) displays and is not designed with mobile friendliness in mind.", {
+            k.text("This project is optimised only for 16:9 (laptop/desktop) 1080p displays and is not designed with mobile friendliness in mind.", {
                 font: "arial",
                 size: 30,
                 width: 480

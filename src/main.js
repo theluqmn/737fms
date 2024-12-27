@@ -4,6 +4,8 @@ const k = kaplay({
 });
 
 import Intro from "./scenes/intro";
+import FMS from "./scenes/fms";
 Intro(k);
+FMS(k);
 
 k.go("intro");

@@ -1,4 +1,4 @@
-export function FMS(k) {
+export default function FMS(k) {
     k.scene("fms", () => {
         const button = k.add([
             k.rect(30,20),
