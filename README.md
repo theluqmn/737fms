@@ -1,27 +1,26 @@
-# Folder structure
+# Boeing 737-800 Flight Management System Simulator
 
-- `src` - source code for your kaplay project
-- `dist` - distribution folder, contains your index.html, built js bundle and static assets
+**Designed and developed by** [Luqman](https://theluqmn.github.io)
 
+A web-based simulator of the Boeing 737-800's flight management system (FMS). Mobile friendly. This project is one of my submissions to the [2024/2025 High Seas](https://highseas.hackclub.com/) event by [Hack Club](https://hackclub.com/).
+
+## To-Do
+
+### Features
+
+- [x] kaplay setup
+- frame
+  - [ ] FMS UI
+  - [ ] buttons
+- logic
+
+### State of the Project
+
+In active development. Rate of progress varies since I work on several projects at once.
 
 ## Development
 
-```sh
-$ npm run dev
-```
+- Language: JavaScript
+- Game Engine: [Kaplayjs](https://github.com/kaplayjs/kaplay)
 
-will start a dev server at http://localhost:8000
-
-## Distribution
-
-```sh
-$ npm run build
-```
-
-will build your js files into `dist/`
-
-```sh
-$ npm run zip
-```
-
-will build your game and package into a .zip file, you can upload to your server or itch.io / newground etc.
+Built on my Windows 11 machine, with Visual Studio Code.
