@@ -27,11 +27,15 @@ export function displayComponent(k) {
     // const textLeftPrimary1 = displayText(k, "left", "primary", 200, "left", "TEST");
     // const textLeftSecondary1 = displayText(k, "left", "secondary", 200, "left", "SECONDARY");
 
-    const buttonLeft2 = displayButton(k, "left", 80, 240);
+    const buttonLeft2 = displayButton(k, "left", 80, 240, () => {
+        displayContents.title = "BOEING 737NG";
+    });
     // const textLeftPrimary2 = displayText(k, "left", "primary", 240, "left", "<DISCORD");
     // const textLeftSecondary2 = displayText(k, "left", "secondary", 240, "left", "SOCIAL MEDIA");
 
-    const buttonLeft3 = displayButton(k, "left", 80, 280);
+    const buttonLeft3 = displayButton(k, "left", 80, 280, () => {
+        displayContents.title = "HIGHSEAS";
+    });
     // const textLeftPrimary3 = displayText(k, "left", "primary", 280, "left", "<HIGHSEAS");
 
     const buttonLeft4 = displayButton(k, "left", 80, 320);
@@ -86,8 +90,8 @@ export function displayText(k, side, type, pos, align, textInput) {
         k.color(255,255,255),
     ]);
 
-    if (type == "secondary") {
-        text.color = k.rgb(225,225,225);
+    if (type == "heading") {
+        text.color = k.rgb(200,200,200);
     }
 
     return text;
