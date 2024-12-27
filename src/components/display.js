@@ -20,19 +20,24 @@ export function displayComponent(k) {
     ]);
 
     // left side
-    const l1 = displayButton(k, "left", 80, 200);
+    const buttonLeft1 = displayButton(k, "left", 80, 200);
     const textLeftPrimary1 = displayText(k, "left", "primary", 200, "left", "TEST");
     const textLeftSecondary1 = displayText(k, "left", "secondary", 200, "left", "SECONDARY");
-    const l2 = displayButton(k, "left", 80, 240);
+
+    const buttonLeft2 = displayButton(k, "left", 80, 240);
     const textLeftPrimary2 = displayText(k, "left", "primary", 240, "left", "<DISCORD");
     const textLeftSecondary2 = displayText(k, "left", "secondary", 240, "left", "SOCIAL MEDIA");
-    const l3 = displayButton(k, "left", 80, 280);
+
+    const buttonLeft3 = displayButton(k, "left", 80, 280);
     const textLeftPrimary3 = displayText(k, "left", "primary", 280, "left", "<HIGHSEAS");
-    const l4 = displayButton(k, "left", 80, 320);
+
+    const buttonLeft4 = displayButton(k, "left", 80, 320);
     const textLeftPrimary4 = displayText(k, "left", "primary", 320, "left", "TEXT");
-    const l5 = displayButton(k, "left", 80, 360);
+
+    const buttonLeft5 = displayButton(k, "left", 80, 360);
     const textLeftPrimary5 = displayText(k, "left", "primary", 360, "left", "TEXT");
-    const l6 = displayButton(k, "left", 80, 400);
+
+    const buttonLeft6 = displayButton(k, "left", 80, 400);
     const textLeftPrimary6 = displayText(k, "left", "primary", 400, "left", "<INIT");
     const textLeftSecondary6 = displayText(k, "left", "secondary", 400, "left", "-----------------");
 
