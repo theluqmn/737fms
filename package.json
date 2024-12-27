@@ -2,7 +2,7 @@
 	"name": "737fms",
 	"type": "module",
 	"scripts": {
-		"deploy": "gh-pages -d dist",
+		"deploy": "gh-pages --dist dist --dotfiles true",
 		"build": "vite build",
 		"dev": "vite",
 		"preview": "vite preview",
