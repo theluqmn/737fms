@@ -1,5 +1,6 @@
 export default function Intro(k) {
     k.scene("intro", () => {
+        // title and description
         const title = k.add([
             k.text("Boeing 737NG Flight Management System Simulator", {
                 font: "arial",
@@ -20,6 +21,7 @@ export default function Intro(k) {
             k.anchor("top")
         ])
 
+        // notice box
         const noticeBox = k.add([
             k.rect(500, 150),
             k.pos(k.width() / 2, 400),
@@ -37,11 +39,13 @@ export default function Intro(k) {
             k.anchor("top")
         ])
 
+        // start button
         const startButton = k.add([
             k.rect(500, 50),
             k.pos(k.width() / 2, 560),
             k.color(255, 255, 255),
-            k.anchor("top")
+            k.anchor("top"),
+            k.area()
         ]);
         const startText = k.add([
             k.text("Start", {
@@ -55,11 +59,13 @@ export default function Intro(k) {
             k.anchor("top")
         ]);
 
+        // github button
         const githubButton = k.add([
             k.rect(500, 50),
             k.pos(k.width() / 2, 620),
             k.color(255, 255, 255),
-            k.anchor("top")
+            k.anchor("top"),
+            k.area()
         ]);
         const githubText = k.add([
             k.text("GitHub Repository", {
@@ -73,6 +79,7 @@ export default function Intro(k) {
             k.anchor("top")
         ]);
 
+        // tutorial button
         const tutorialButton = k.add([
             k.rect(500, 50),
             k.pos(k.width() / 2, 680),
@@ -90,5 +97,14 @@ export default function Intro(k) {
             k.color(0, 0, 0),
             k.anchor("top")
         ]);
+
+        // logic for buttons
+        startButton.onHover(() => { startButton.color = k.rgb(225,225,225) });
+        startButton.onHoverEnd(() => { startButton.color = k.rgb(255,255,255) });
+        startButton.onClick(() => { k.go("fms") });
+
+        githubButton.onHover(() => { githubButton.color = k.rgb(225,225,225) });
+        githubButton.onHoverEnd(() => { githubButton.color = k.rgb(255,255,255) });
+        githubButton.onClick(() => { window.open("https://github.com/theluqmn/737fms") });
     });
 }
