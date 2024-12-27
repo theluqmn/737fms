@@ -14,17 +14,18 @@ export function displayComponent(k) {
     ]);
 
     // left side
-    const l1 = displayButton(k, 80, 210, () => {
+    const l1 = displayButton(k, 80, 200, () => {
         console.log("left 1");
     });
-    const d1 = displayText(k, 125, 170, "PERF", "right");
-    const d2 = displayText(k, 125, 190, "  GW/CRZ CG", "left");
-    const l2 = displayButton(k, 80, 250);
-    const l3 = displayButton(k, 80, 290);
-    const l4 = displayButton(k, 80, 330);
-    const l5 = displayButton(k, 80, 370);
-    const l6 = displayButton(k, 80, 410);
-    const d3 = displayText(k, 125, 410, "< INDEX");
+    const d1 = displayTextPrimary(k, 125, 160, "PERF", "right");
+    const l2 = displayButton(k, 80, 240);
+    const d2 = displayTextSecondary(k, 125, 180, "  GW/CRZ CG", "left");
+    const d3 = displayTextPrimary(k, 125, 200, "158.9/19.1%");
+    const l3 = displayButton(k, 80, 280);
+    const l4 = displayButton(k, 80, 320);
+    const l5 = displayButton(k, 80, 360);
+    const l6 = displayButton(k, 80, 400);
+    const d4 = displayTextPrimary(k, 125, 400, "< INDEX");
 
     // right side
     const r1 = displayButton(k, 520, 210);
@@ -67,11 +68,27 @@ function displayButton(k, x, y, onClick) {
     return button;
 }
 
-function displayText(k, x, y, text, align = "left") {
+function displayTextPrimary(k, x, y, text, align = "left") {
     const textComponent = k.add([
         k.text(text, {
             font: "consolas",
             size: 20,
+            width: 170,
+            align: align
+        }),
+        k.pos(x, y),
+        k.color(255,255,255),
+        k.anchor("topleft")
+    ]);
+
+    return textComponent;
+}
+
+function displayTextSecondary(k, x, y, text, align = "left") {
+    const textComponent = k.add([
+        k.text(text, {
+            font: "consolas",
+            size: 18,
             width: 170,
             align: align
         }),
