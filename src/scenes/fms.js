@@ -48,7 +48,9 @@ function displayComponent(k) {
     ]);
 
     // left side
-    const l1 = displayButton(k, 80, 215);
+    const l1 = displayButton(k, 80, 215, () => {
+        console.log("left 1");
+    });
     const l2 = displayButton(k, 80, 255);
     const l3 = displayButton(k, 80, 295);
     const l4 = displayButton(k, 80, 335);
@@ -64,7 +66,7 @@ function displayComponent(k) {
     const r6 = displayButton(k, 520, 415);
 }
 
-function displayButton(k, x, y) {
+function displayButton(k, x, y, onClick) {
     const button = k.add([
         k.rect(28, 20),
         k.pos(x, y),
@@ -72,7 +74,6 @@ function displayButton(k, x, y) {
         k.anchor("top"),
         k.area(),
         k.scale(1),
-        // Add a unique identifier component
         "button"
     ]);
 
@@ -84,13 +85,13 @@ function displayButton(k, x, y) {
         k.scale(1),
     ]);
 
-    // Use onClick instead of onMouseDown/Release for this specific button only
     button.onClick(() => {
         button.scaleTo(0.95);
         highlight.scaleTo(0.95);
         setTimeout(() => {
             button.scaleTo(1);
             highlight.scaleTo(1);
+            if (onClick) onClick(); // Run the callback function if it's provided
         }, 100);
     });
 
