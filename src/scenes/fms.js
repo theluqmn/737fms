@@ -1,5 +1,6 @@
 import { displayComponent } from "../components/display";
 import { frameComponent } from "../components/frame";
+import { functionComponent } from "../components/functions";
 
 export default function FMS(k) {
     k.scene("fms", () => {
@@ -15,6 +16,7 @@ export default function FMS(k) {
         ]);
 
         frameComponent(k);
+        functionComponent(k);
         displayComponent(k);
     });
 };
