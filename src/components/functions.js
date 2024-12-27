@@ -19,21 +19,24 @@ export function functionComponent(k) {
 
     functionButton(k, 126, 490, 2, "INIT\nREF");
     functionButton(k, 190, 490, 1, "RTE");
-    functionButton(k, 254, 490);
-    functionButton(k, 318, 490);
-    functionButton(k, 382, 490);
+    functionButton(k, 254, 490, 1, "CLB");
+    functionButton(k, 318, 490, 1, "CRZ");
+    functionButton(k, 382, 490, 1, "DES");
 
-    functionButton(k, 126, 526);
-    functionButton(k, 190, 526);
-    functionButton(k, 254, 526);
-    functionButton(k, 318, 526);
-    functionButton(k, 382, 526);
+    functionButton(k, 126, 526, 1, "MENU");
+    functionButton(k, 190, 526, 1, "LEGS");
+    functionButton(k, 254, 526, 2, "DEP\nARR");
+    functionButton(k, 318, 526, 1, "HOLD");
+    functionButton(k, 382, 526, 1, "PROG");
 
-    functionButton(k, 126, 562);
-    functionButton(k, 190, 562);
+    functionButton(k, 466, 526, 1, "EXEC");
 
-    functionButton(k, 126, 598);
-    functionButton(k, 190, 598);
+    functionButton(k, 126, 562, 2, "N1\nLIMIT");
+    functionButton(k, 190, 562, 1, "FIX");
+
+    functionButton(k, 126, 598, 2, "PREV\nPAGE");
+    functionButton(k, 190, 598, 2, "NEXT\nPAGE");
+
 }
 
 function functionButton(k, x, y, lines, textInput, onClick) {
@@ -52,7 +55,7 @@ function functionButton(k, x, y, lines, textInput, onClick) {
     const text = k.add([
         k.text(textInput, {
             font: "arial",
-            size: 10,
+            size: 11,
             width: 56,
             align: "center"
         }),
