@@ -6,6 +6,9 @@
 
 A web-based simulator of the Boeing 737-800's flight management system (FMS). This project is one of my submissions to the [2024/2025 High Seas](https://highseas.hackclub.com/) event by [Hack Club](https://hackclub.com/).
 
+> [!WARNING]
+> This project is not designed for mobile devices.
+
 ## To-Do
 
 ### Features
