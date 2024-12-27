@@ -3,7 +3,7 @@ const k = kaplay({
     background: [0,0,0]
 });
 
-import Intro from "./scenes/notice";
+import Intro from "./scenes/intro";
 Intro(k);
 
 k.go("intro");
