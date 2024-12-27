@@ -17,8 +17,8 @@ export function functionComponent(k) {
         k.anchor("top")
     ]);
 
-    functionButton(k, 126, 490, "INIT\nREF");
-    functionButton(k, 190, 490, "RTE");
+    functionButton(k, 126, 490, 2, "INIT\nREF");
+    functionButton(k, 190, 490, 1, "RTE");
     functionButton(k, 254, 490);
     functionButton(k, 318, 490);
     functionButton(k, 382, 490);
@@ -36,7 +36,7 @@ export function functionComponent(k) {
     functionButton(k, 190, 598);
 }
 
-function functionButton(k, x, y, textInput, onClick) {
+function functionButton(k, x, y, lines, textInput, onClick) {
     const button = k.add([
         k.rect(56, 28, {
             radius: 3
@@ -47,7 +47,8 @@ function functionButton(k, x, y, textInput, onClick) {
         k.area(),
         k.scale(1)
     ]);
-
+    
+    if (lines == 1) { y += 5 };
     const text = k.add([
         k.text(textInput, {
             font: "arial",
