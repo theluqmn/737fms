@@ -7,7 +7,7 @@ export default function Intro(k) {
                 size: 50,
                 width: 500
             }),
-            k.pos(k.width() / 2, 50),
+            k.pos(300, 50),
             k.anchor("top")
         ])
         const descriptionn = k.add([
@@ -16,7 +16,7 @@ export default function Intro(k) {
                 size: 20,
                 width: 500
             }),
-            k.pos(k.width() / 2, 200),
+            k.pos(300, 200),
             k.color(225,225,225),
             k.anchor("top")
         ])
@@ -24,7 +24,7 @@ export default function Intro(k) {
         // notice box
         const noticeBox = k.add([
             k.rect(500, 150),
-            k.pos(k.width() / 2, 400),
+            k.pos(300, 400),
             k.color(241,196,15),
             k.anchor("top")
         ]);
@@ -34,7 +34,7 @@ export default function Intro(k) {
                 size: 30,
                 width: 480
             }),
-            k.pos(k.width() / 2, 415),
+            k.pos(300, 415),
             k.color(0, 0, 0),
             k.anchor("top")
         ])
@@ -42,7 +42,7 @@ export default function Intro(k) {
         // start button
         const startButton = k.add([
             k.rect(500, 50),
-            k.pos(k.width() / 2, 560),
+            k.pos(300, 560),
             k.color(255, 255, 255),
             k.anchor("top"),
             k.area()
@@ -54,7 +54,7 @@ export default function Intro(k) {
                 width: 500,
                 align: "center"
             }),
-            k.pos(k.width() / 2, 575),
+            k.pos(300, 575),
             k.color(0, 0, 0),
             k.anchor("top")
         ]);
@@ -62,7 +62,7 @@ export default function Intro(k) {
         // github button
         const githubButton = k.add([
             k.rect(500, 50),
-            k.pos(k.width() / 2, 620),
+            k.pos(300, 620),
             k.color(255, 255, 255),
             k.anchor("top"),
             k.area()
@@ -74,7 +74,7 @@ export default function Intro(k) {
                 width: 500,
                 align: "center"
             }),
-            k.pos(k.width() / 2, 635),
+            k.pos(300, 635),
             k.color(0, 0, 0),
             k.anchor("top")
         ]);
@@ -82,7 +82,7 @@ export default function Intro(k) {
         // tutorial button
         const tutorialButton = k.add([
             k.rect(500, 50),
-            k.pos(k.width() / 2, 680),
+            k.pos(300, 680),
             k.color(255, 255, 255),
             k.anchor("top")
         ]);
@@ -93,7 +93,7 @@ export default function Intro(k) {
                 width: 500,
                 align: "center"
             }),
-            k.pos(k.width() / 2, 695),
+            k.pos(300, 695),
             k.color(0, 0, 0),
             k.anchor("top")
         ]);
