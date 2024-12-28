@@ -1,6 +1,6 @@
 import { lineSelectKey } from "./keys";
 
-export function displayComponent(k) {
+export function initDisplay(k) {
     const frame = k.add([
         k.rect(400, 340, {
             radius: 20

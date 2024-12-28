@@ -1,4 +1,4 @@
-import { displayComponent } from "../components/display";
+import { initDisplay } from "../components/display";
 import { displayEngine } from "../functions/displayEngine";
 import { frameComponent } from "../components/frame";
 import { functionComponent } from "../components/functions";
@@ -30,7 +30,8 @@ export default function FMS(k) {
 
         frameComponent(k);
         functionComponent(k);
-        displayComponent(k);
+        initDisplay(k);
+
         displayEngine(k);
         Alphabetical(k);
         Numerical(k);

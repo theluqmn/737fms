@@ -12,9 +12,9 @@ let input = {
         }
     },
     mode: {
-        INIT: false, RTE: false, CLB: false, CRZ: false, DES: false,
-        MENU: false, LEGS: false, DEPARR: false, HOLD: false, PROG: false,
-        N1LIMIT: false, FIX: false, PREVPAGE: false, NEXTPAGE: false,
+        "INIT\nREF": false, RTE: false, CLB: false, CRZ: false, DES: false,
+        MENU: false, LEGS: false, "DEP\nARR": false, HOLD: false, PROG: false,
+        "N1\nLIMIT": false, FIX: false, "PREV\nPAGE": false, "NEXT\nPAGE": false,
         EXEC: false,
     },
     alphabetical: {
@@ -65,7 +65,7 @@ export function inputRegister(type, key) {
 
     } else if (type == "mode") {
         input.mode[key] = true;
-    }
+    };
 
     console.log(`${type} ${key} registered`);
 }
@@ -76,7 +76,7 @@ export function inputTimeout(type, key) {
     } else if (type == "numerical") {
         input.numerical[key] = false;
     } else if (type == "mode") {
-        input.mode[key] = false;
+        input.mode[key] = false; 
     };
 };
 

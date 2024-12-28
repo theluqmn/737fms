@@ -1,3 +1,5 @@
+import { inputRegister, inputTimeout } from "../functions/inputEngine";
+
 export function functionComponent(k) {
     const frame1 = k.add([
         k.rect(420, 92, {
@@ -46,7 +48,7 @@ export function functionComponent(k) {
 
 }
 
-function functionButton(k, x, y, lines, textInput, onClick) {
+function functionButton(k, x, y, lines, textInput) {
     const button = k.add([
         k.rect(56, 32, {
             radius: 3
@@ -75,10 +77,11 @@ function functionButton(k, x, y, lines, textInput, onClick) {
     button.onClick(() => {
         button.scaleTo(0.95);
         text.scaleTo(0.95);
+        inputRegister("mode", textInput)
         setTimeout(() => {
             button.scaleTo(1);
             text.scaleTo(1);
-            if (onClick) onClick(); // Run the callback function if it's provided
+            inputTimeout("mode", textInput)
         }, 100);
     });
 }
