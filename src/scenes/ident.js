@@ -20,7 +20,7 @@ export default function identScene(k) {
         setLineText("right", 6, "-----------------", "POS INIT>")
 
         const toIndex = handleInput(() => {
-            console.log("index")
+            k.go("index")
         })
 
         k.onUpdate(() => {
