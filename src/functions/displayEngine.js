@@ -23,14 +23,9 @@ export const displayContents = {
     scratchpad: scratchpadText,
 }
 
-export function setLineText(side, line, heading, text) {
-    displayContents[side][line].heading = heading;
-    displayContents[side][line].text = text;
-}
-
-export function setTitle(title) {
-    displayContents.title = title;
-}
+export function setLineText(side, line, heading, text) { displayContents[side][line].heading = heading; displayContents[side][line].text = text; };
+export function setTitle(title) { displayContents.title = title; };
+export function setPage(current, total) { displayContents.page[0] = current; displayContents.page[1] = total;  };
 
 export function displayEngine(k) {
     const title = displayText(k, "left", "main", 160, "center", displayContents.title);
