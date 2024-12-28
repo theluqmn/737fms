@@ -1,4 +1,4 @@
-import { inputRegister, inputTimeout } from "../functions/inputEngine";
+import { inputRegister, inputTimeout, lineSelectKeyRegister, lineSelectKeyTimeout } from "../functions/inputEngine";
 
 export function alphabeticalKeys(k, x, y, textInput) {
     let size = 22;
@@ -57,7 +57,7 @@ export function alphabeticalKeys(k, x, y, textInput) {
     });
 }
 
-export function numericalKeys(k, x, y, textInput, onClick) {
+export function numericalKeys(k, x, y, textInput) {
     let size = 24;
     let adjust = 8;
 
@@ -102,7 +102,7 @@ export function numericalKeys(k, x, y, textInput, onClick) {
     });
 }
 
-function modeKeys(k, x, y, lines, textInput, onClick) {
+function modeKeys(k, x, y, lines, textInput) {
     const button = k.add([
         k.rect(56, 32, {
             radius: 3
@@ -139,7 +139,15 @@ function modeKeys(k, x, y, lines, textInput, onClick) {
     });
 }
 
-export function lineSelectKey(k, side, x, y, onClick) {
+export function lineSelectKey(k, side, pos) {
+    let x;
+    let y = 160 + (pos * 40)
+    if (side == "left") {
+        x = 80
+    } else if (side == "right") {
+        x = 520
+    }
+
     const button = k.add([
         k.rect(28, 20),
         k.pos(x, y),
@@ -177,10 +185,11 @@ export function lineSelectKey(k, side, x, y, onClick) {
     button.onClick(() => {
         button.scaleTo(0.95);
         highlight.scaleTo(0.95);
+        lineSelectKeyRegister(side, pos);
         setTimeout(() => {
             button.scaleTo(1);
             highlight.scaleTo(1);
-            if (onClick) onClick(); // Run the callback function if it's provided
+            lineSelectKeyTimeout(side, pos)
         }, 100);
     });
 

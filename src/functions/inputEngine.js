@@ -3,6 +3,20 @@ export function addScratchpadText(input) { scratchpadText += input; };
 export function clearScratchpadText() { scratchpadText = ""; };
 
 let input = {
+    line: {
+        left: {
+            1: false, 2: false, 3: false, 4: false, 5: false, 6: false
+        },
+        right: {
+            1: false, 2: false, 3: false, 4: false, 5: false, 6: false
+        }
+    },
+    mode: {
+        INIT: false, RTE: false, CLB: false, CRZ: false, DES: false,
+        MENU: false, LEGS: false, DEPARR: false, HOLD: false, PROG: false,
+        N1LIMIT: false, FIX: false, PREVPAGE: false, NEXTPAGE: false,
+        EXEC: false,
+    },
     alphabetical: {
         A: false, B: false, C: false, D: false, E: false,
         F: false, G: false, H: false, I: false, J: false,
@@ -15,13 +29,11 @@ let input = {
         0: false, 1: false, 2: false, 3: false, 4: false,
         5: false, 6: false, 7: false, 8: false, 9: false,
         ".": false, "+/-": false,
-    },
-    mode: {
-        INIT: false, RTE: false, CLB: false, CRZ: false, DES: false,
-        MENU: false, LEGS: false, DEPARR: false, HOLD: false, PROG: false,
-        N1LIMIT: false, FIX: false, PREVPAGE: false, NEXTPAGE: false,
-        EXEC: false,
-    }}
+    }
+}
+
+export function lineSelectKeyRegister(side, line) { input.line[side][line] = true; console.log(`${side} ${line} key registered`); };
+export function lineSelectKeyTimeout(side, line) { input.line[side][line] = false; };
 
 export function inputRegister(type, key) {
     if (type == "alphabetical") {
@@ -65,7 +77,7 @@ export function inputTimeout(type, key) {
         input.numerical[key] = false;
     } else if (type == "mode") {
         input.mode[key] = false;
-    }
-}
+    };
+};
 
 export { scratchpadText, input };
