@@ -1,4 +1,5 @@
 import { displayText } from "../components/display";
+import { inputText } from "./inputEngine";
 
 export const displayContents = {
     title: "Boeing 737NG FMS",
@@ -18,7 +19,7 @@ export const displayContents = {
         5: { text: "YOUTUBE TUTOR>", heading: "" },
         6: { text: "START>", heading: "-----------------" },
     },
-    bottom: "DESIGNED BY LUQMAN",
+    bottom: inputText,
 }
 
 export function displayEngine(k) {
@@ -58,10 +59,32 @@ export function displayEngine(k) {
 
     k.onUpdate(() => {
         title.text = displayContents.title;
+        console.text = displayContents.bottom;
+        // right
         headingLeft1.text = displayContents.left[1].heading;
-
+        headingLeft2.text = displayContents.left[2].heading;
+        headingLeft3.text = displayContents.left[3].heading;
+        headingLeft4.text = displayContents.left[4].heading;
+        headingLeft5.text = displayContents.left[5].heading;
+        headingLeft6.text = displayContents.left[6].heading;
+        headingRight1.text = displayContents.right[1].heading;
+        headingRight2.text = displayContents.right[2].heading;
+        headingRight3.text = displayContents.right[3].heading;
+        headingRight4.text = displayContents.right[4].heading;
+        headingRight5.text = displayContents.right[5].heading;
+        headingRight6.text
+        // left
         textLeft1.text = displayContents.left[1].text;
         textLeft2.text = displayContents.left[2].text;
         textLeft3.text = displayContents.left[3].text;
+        textLeft4.text = displayContents.left[4].text;
+        textLeft5.text = displayContents.left[5].text;
+        textLeft6.text = displayContents.left[6].text;
+        textRight1.text = displayContents.right[1].text;
+        textRight2.text = displayContents.right[2].text;
+        textRight3.text = displayContents.right[3].text;
+        textRight4.text = displayContents.right[4].text;
+        textRight5.text = displayContents.right[5].text;
+        textRight6.text = displayContents.right[6].text;
     });
 }
