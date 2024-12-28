@@ -29,6 +29,13 @@ export function functionComponent(k) {
     functionButton(k, 318, 530, 1, "HOLD");
     functionButton(k, 382, 530, 1, "PROG");
 
+    const executeIndicator = k.add([
+        k.rect(46, 6),
+        k.pos(466, 520),
+        k.color(2,46,0),
+        k.anchor("top")
+    ])
+
     functionButton(k, 466, 530, 1, "EXEC");
 
     functionButton(k, 126, 570, 2, "N1\nLIMIT");
