@@ -1,5 +1,5 @@
 import FMS from "../functions/fms";
-import { setTitle, setPage, setLineText, clearLines, scratchpadInsert } from "../functions/displayEngine";
+import { setTitle, setPage, setLineText, clearLines, scratchpadInsert, scratchpadCopy } from "../functions/displayEngine";
 import { input, handleInput, inputTimeout } from "../functions/inputEngine";
 
 export function posInit1Scene(k) {
@@ -45,7 +45,11 @@ export function posInit2Scene(k) {
         setLineText("left", 1, " FMC POS", "")
         setLineText("left", 2, " IRS L", "")
         setLineText("left", 3, " IRS R", "")
-        setLineText("left", 4, " GPS L", "")
+        setLineText("left", 4, " GPS L", "MEMES")
+        const copyGPS = handleInput(() => {
+            scratchpadCopy("left", 4)
+        })
+
         setLineText("left", 5, " GPS R", "")
         
         setLineText("right", 1, "GS", "")
@@ -56,6 +60,8 @@ export function posInit2Scene(k) {
         const pageNext = handleInput(() => { k.go("pos-init-3"); inputTimeout("mode", "NEXT\nPAGE") })
 
         k.onUpdate(() => {
+            copyGPS(input.line.left[4])
+
             pagePrev(input.mode["PREV\nPAGE"])
             pageNext(input.mode["NEXT\nPAGE"])
         })

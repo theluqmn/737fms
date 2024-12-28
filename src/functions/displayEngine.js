@@ -1,6 +1,5 @@
-import { clear } from "console";
 import { displayText } from "../components/display";
-import { clearScratchpadText, scratchpadText } from "./inputEngine";
+import { addScratchpadText, clearScratchpadText, scratchpadText } from "./inputEngine";
 
 export const displayContents = {
     title: "",
@@ -42,13 +41,12 @@ export function scratchpadInsert(side, line) {
 
 export function scratchpadCopy(side, line) {
     clearScratchpadText();
-    scratchpadText = displayContents[side][line].text;
+    addScratchpadText(displayContents[side][line].text);
 }
 
 export function clearLines() {
     displayContents.title = ""
     displayContents.page = [0,0]
-    displayContents.scratchpad = ""
     
     for (let i = 1; i <= 6; i++) {
         displayContents.left[i] = { heading: "", text: ""}
