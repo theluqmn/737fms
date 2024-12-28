@@ -8,17 +8,17 @@ export const displayContents = {
         3: { text: "<HIGHSEAS", heading: "" },
         4: { text: "", heading: "" },
         5: { text: "", heading: "" },
-        6: { text: "", heading: "" },
+        6: { text: "<HOME", heading: "-----------------" },
     },
     right: {
-        1: { text: "", heading: "" },
-        2: { text: "", heading: "" },
-        3: { text: "", heading: "" },
-        4: { text: "", heading: "" },
-        5: { text: "", heading: "" },
-        6: { text: "WE", heading: "" },
+        1: { text: "GITHUB>", heading: "LINKS" },
+        2: { text: "ITCH.IO>", heading: "" },
+        3: { text: "DEMO>", heading: "" },
+        4: { text: "DOCUMENTATION>", heading: "" },
+        5: { text: "YOUTUBE TUTOR>", heading: "" },
+        6: { text: "START>", heading: "-----------------" },
     },
-    bottom: "TESTING 1, 2, 3, 4, 5, 6"
+    bottom: "DESIGNED BY LUQMAN",
 }
 
 export function displayEngine(k) {
