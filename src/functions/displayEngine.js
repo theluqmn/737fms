@@ -60,7 +60,7 @@ export function displayEngine(k) {
     let right = displayContents.right
 
     const title = displayText(k, "left", "main", 160, "center", displayContents.title);
-    const page = displayText(k, "right", "main", 160, "center", "1/1");
+    const page = displayText(k, "right", "main", 160, "right", "1/1");
     const scratchpad = displayText(k, "left", "main", 430, "left", displayContents.scratchpad);
 
     // left side

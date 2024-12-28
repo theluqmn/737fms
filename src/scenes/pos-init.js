@@ -1,6 +1,6 @@
 import FMS from "../functions/fms";
 import { setTitle, setPage, setLineText, clearLines, scratchpadInsert } from "../functions/displayEngine";
-import { input, handleInput } from "../functions/inputEngine";
+import { input, handleInput, inputTimeout } from "../functions/inputEngine";
 
 export function posInit1Scene(k) {
     k.scene("pos-init-1", () => {
@@ -25,9 +25,7 @@ export function posInit1Scene(k) {
 
         setLineText("right", 6, "-----------------", "ROUTE>")
 
-        const pageNext = handleInput(() => {
-            k.go("pos-init-2")
-        })
+        const pageNext = handleInput(() => { k.go("pos-init-2"); inputTimeout("mode", "NEXT\nPAGE") })
 
         k.onUpdate(() => {
             toINDEX(input.line.left[6])
@@ -52,7 +50,7 @@ export function posInit2Scene(k) {
         
         setLineText("right", 1, "GS", "")
         
-        setLineText("left", 6, "RADIO", "")
+        setLineText("left", 6, " RADIO", "")
 
         const pagePrev = handleInput(() => { k.go("pos-init-1") })
         const pageNext = handleInput(() => { k.go("pos-init-3") })
