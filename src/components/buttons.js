@@ -1,4 +1,4 @@
-export function displayButton(k, side, x, y, onClick) {
+export function lineSelectKey(k, side, x, y, onClick) {
     const button = k.add([
         k.rect(28, 20),
         k.pos(x, y),

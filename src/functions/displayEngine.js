@@ -3,6 +3,7 @@ import { inputText } from "./inputEngine";
 
 export const displayContents = {
     title: "Boeing 737NG FMS",
+    page: [1,1],
     left: {
         1: { text: "<TEST", heading: " SET TITLE" },
         2: { text: "<BOEING 737NG", heading: "" },
@@ -24,6 +25,7 @@ export const displayContents = {
 
 export function displayEngine(k) {
     const title = displayText(k, "left", "main", 160, "center", displayContents.title);
+    const page = displayText(k, "right", "main", 160, "center", "1/1");
     const scratchpad = displayText(k, "left", "main", 430, "left", displayContents.scratchpad);
 
     // left side
@@ -60,6 +62,14 @@ export function displayEngine(k) {
     k.onUpdate(() => {
         title.text = displayContents.title;
         scratchpad.text = displayContents.scratchpad;
+
+        // page number
+        if (displayContents.page[1] >= 2) {
+            page.text = displayContents.page[0] + "/" + displayContents.page[1];
+        } else {
+            page.text = "";
+        }
+
         // right
         headingLeft1.text = displayContents.left[1].heading;
         headingLeft2.text = displayContents.left[2].heading;
