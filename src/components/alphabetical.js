@@ -37,7 +37,7 @@ export default function Alphabetical(k) {
     button(k, 425, 830, "/", () => { addInputText("/"); });
     button(k, 478, 830, "CLR", () => { clearInputText(); });
 }
-function button(k, x, y, textInput, onClick) {
+function alphabeticalKeys(k, x, y, textInput, onClick) {
     let size = 22;
     let adjust = 10;
 

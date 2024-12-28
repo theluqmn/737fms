@@ -1,5 +1,6 @@
 
 let scratchpadText = "";
+let inputC
 
 export function addInputText(input) {
     scratchpadText += input;
