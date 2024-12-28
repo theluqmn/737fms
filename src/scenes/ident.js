@@ -1,10 +1,12 @@
 import FMS from "../functions/fms";
-import { setTitle, setPage, setLineText} from "../functions/displayEngine";
+import { setTitle, setPage, setLineText, clearLines} from "../functions/displayEngine";
 import { input, handleInput } from "../functions/inputEngine";
 
 export default function identScene(k) {
     k.scene("ident", () => {
         FMS(k);
+        clearLines();
+        
         setTitle("IDENT");
         setPage(0,0)
 
