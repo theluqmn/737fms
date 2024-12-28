@@ -17,7 +17,7 @@ export default function indexScene(k) {
 
         setLineText("left", 2, "", "<POS")
 
-        setLineText("left", 3, "", "<PERF")
+        setLineText("left", 3, "WARN: BUGGY", "<PERF")
         const toPERF = handleInput(() => {
             k.go("perf-init")
         })
