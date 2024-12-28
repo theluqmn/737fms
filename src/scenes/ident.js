@@ -6,7 +6,7 @@ export default function identScene(k) {
     k.scene("ident", () => {
         FMS(k);
         clearLines();
-        
+
         setTitle("IDENT");
         setPage(0,0)
 
@@ -23,6 +23,7 @@ export default function identScene(k) {
 
         const toINDEX = handleInput(() => {
             k.go("index")
+            clearLines()
         })
 
         k.onUpdate(() => {

@@ -16,13 +16,14 @@ export default function perfInitScene(k) {
         setLineText("left", 4, " RESERVES", "--.-")
         setLineText("left", 5, " COST INDEX", "---")
         
-        setLineText("right", 1, "", "NAV DATA>")
-        setLineText("right", 5, "", "SEL CONFIG>")
-        setLineText("right", 6, "", "MAINT>")
-
+        setLineText("right", 1, "TRIP/CRZ ALT", "-----")
+        setLineText("right", 2, "CRZ WIND", "---°/---")
+        setLineText("right", 5, "TRANS ALT", "5000")
+        
         setLineText("left", 6, "-----------------", "<INDEX")
         const toINDEX = handleInput(() => {
             k.go("index")
+            clearLines()
         })
 
         setLineText("right", 6, "-----------------", "N1 LIMIT>")
