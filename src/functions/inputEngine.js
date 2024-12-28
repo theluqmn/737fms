@@ -41,8 +41,16 @@ export function inputRegister(type, key) {
         }
 
         addScratchpadText(key);
+
     } else if (type == "numerical") {
         input.numerical[key] = true;
+
+        if (key == "+/-") {
+            return;
+        }
+
+        addScratchpadText(key);
+
     } else if (type == "mode") {
         input.mode[key] = true;
     }

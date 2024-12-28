@@ -93,10 +93,11 @@ export function numericalKeys(k, x, y, textInput, onClick) {
     button.onClick(() => {
         button.scaleTo(0.95);
         text.scaleTo(0.95);
+        inputRegister("numerical", textInput);
         setTimeout(() => {
             button.scaleTo(1);
             text.scaleTo(1);
-            if (onClick) onClick(); // Run the callback function if it's provided
+            inputTimeout("numerical", textInput)
         }, 100);
     });
 }
