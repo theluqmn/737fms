@@ -3,7 +3,7 @@ import { setTitle, setPage, setLineText, clearLines, scratchpadInsert } from "..
 import { input, handleInput } from "../functions/inputEngine";
 
 export default function posInitScene(k) {
-    k.scene("perf-init", () => {
+    k.scene("pos-init", () => {
         FMS(k);
         clearLines();
 
@@ -28,7 +28,6 @@ export default function posInitScene(k) {
 
         k.onUpdate(() => {
             toINDEX(input.line.left[6])
-            addCostIndex(input.line.left[5])
         })
     });
 };

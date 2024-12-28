@@ -38,7 +38,7 @@ export function initDisplay(k) {
 export function displayText(k, side, type, pos, align, textInput, activated) {
     let size;
     let x;
-    let width = 180;
+    let width = 340;
 
     if (type == "text") {
         size = 20;
@@ -53,7 +53,7 @@ export function displayText(k, side, type, pos, align, textInput, activated) {
     if (side == "left") {
         x = 130;
     } else if (side == "right") {
-        x = 290;
+        x = 130;
     }
 
     const text = k.add([
