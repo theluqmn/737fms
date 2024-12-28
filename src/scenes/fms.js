@@ -7,9 +7,19 @@ import Numerical from "../components/numerical";
 
 export default function FMS(k) {
     k.scene("fms", () => {
+
+        k.add([
+            k.text("Boeing 737NG\nFlight Management Computer", {
+                font: "consolas",
+                size: 30,
+            }),
+            k.pos(270, 10),
+            k.anchor("top")
+        ])
+
         k.add([
             k.text("proudly made using kaplayjs", {
-                font: "arial",
+                font: "consolas",
                 size: 18,
                 width: 500
             }),

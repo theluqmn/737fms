@@ -9,7 +9,7 @@ export const displayContents = {
         3: { text: "<HIGHSEAS", heading: "" },
         4: { text: "", heading: "" },
         5: { text: "", heading: "" },
-        6: { text: "<HOME", heading: "-----------------" },
+        6: { text: "", heading: "-----------------" },
     },
     right: {
         1: { text: "GITHUB>", heading: "LINKS" },
@@ -19,12 +19,12 @@ export const displayContents = {
         5: { text: "YOUTUBE TUTOR>", heading: "" },
         6: { text: "START>", heading: "-----------------" },
     },
-    bottom: inputText,
+    scratchpad: inputText,
 }
 
 export function displayEngine(k) {
     const title = displayText(k, "left", "main", 160, "center", displayContents.title);
-    const console = displayText(k, "left", "main", 430, "left", displayContents.bottom);
+    const scratchpad = displayText(k, "left", "main", 430, "left", displayContents.scratchpad);
 
     // left side
     const headingLeft1 = displayText(k, "left", "heading", 200, "left", displayContents.left[1].heading);
@@ -59,7 +59,7 @@ export function displayEngine(k) {
 
     k.onUpdate(() => {
         title.text = displayContents.title;
-        console.text = displayContents.bottom;
+        scratchpad.text = displayContents.scratchpad;
         // right
         headingLeft1.text = displayContents.left[1].heading;
         headingLeft2.text = displayContents.left[2].heading;

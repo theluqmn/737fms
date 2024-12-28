@@ -11,7 +11,11 @@ export default function Intro(k) {
             k.anchor("top")
         ])
         const descriptionn = k.add([
-            k.text("A web-based simulator of the Boeing 737-800's flight management system (FMS). Not affliated with Boeing, this is a project for educational purposes only.", {
+            k.text(`
+A web-based simulator of the Boeing 737-800's flight management system (FMS). Not affliated with Boeing, this is a project for educational purposes only.
+
+It is recommended that you have a basic background in aviation to understand how the FMS works, or at the very least, check the YouTube tutorial linked below.
+                `, {
                 font: "arial",
                 size: 20,
                 width: 500
