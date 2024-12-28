@@ -2,8 +2,8 @@ import FMS from "../functions/fms";
 import { setTitle, setPage, setLineText, clearLines, scratchpadInsert } from "../functions/displayEngine";
 import { input, handleInput } from "../functions/inputEngine";
 
-export default function posInitScene(k) {
-    k.scene("pos-init", () => {
+export function posInit1Scene(k) {
+    k.scene("pos-init-1", () => {
         FMS(k);
         clearLines();
 
@@ -25,8 +25,41 @@ export default function posInitScene(k) {
 
         setLineText("right", 6, "-----------------", "ROUTE>")
 
+        const pageNext = handleInput(() => {
+            k.go("pos-init-2")
+        })
+
         k.onUpdate(() => {
             toINDEX(input.line.left[6])
+            pageNext(input.mode["NEXT\nPAGE"])
+        })
+    });
+};
+
+export function posInit2Scene(k) {
+    k.scene("pos-init-2", () => {
+        FMS(k);
+        clearLines();
+
+        setTitle("POS REF");
+        setPage(2,3)
+
+        setLineText("left", 1, " FMC POS", "")
+        setLineText("left", 2, " IRS L", "")
+        setLineText("left", 3, " IRS R", "")
+        setLineText("left", 4, " GPS L", "")
+        setLineText("left", 5, " GPS R", "")
+        
+        setLineText("right", 1, "GS", "")
+        
+        setLineText("left", 6, "RADIO", "")
+
+        const pagePrev = handleInput(() => { k.go("pos-init-1") })
+        const pageNext = handleInput(() => { k.go("pos-init-3") })
+
+        k.onUpdate(() => {
+            pagePrev(input.mode["PREV\nPAGE"])
+            pageNext(input.mode["NEXT\nPAGE"])
         })
     });
 };

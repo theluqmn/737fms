@@ -25,7 +25,7 @@ export default function identScene(k) {
 
         setLineText("right", 6, "-----------------", "POS INIT>")
         const toPOSINIT = handleInput(() => {
-            k.go("pos-init")
+            k.go("pos-init-1")
         })
 
         k.onUpdate(() => {
