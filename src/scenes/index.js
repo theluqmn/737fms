@@ -13,7 +13,6 @@ export default function indexScene(k) {
         setLineText("left", 1, "", "<IDENT")
         const toIDENT = handleInput(() => {
             k.go("ident")
-            clearLines()
         })
 
         setLineText("left", 2, "", "<POS")
@@ -21,7 +20,6 @@ export default function indexScene(k) {
         setLineText("left", 3, "", "<PERF")
         const toPERF = handleInput(() => {
             k.go("perf-init")
-            clearLines()
         })
         
         setLineText("left", 4, "", "<TAKEOFF")

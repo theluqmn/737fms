@@ -23,7 +23,6 @@ export default function identScene(k) {
 
         const toINDEX = handleInput(() => {
             k.go("index")
-            clearLines()
         })
 
         k.onUpdate(() => {

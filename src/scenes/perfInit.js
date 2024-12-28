@@ -23,7 +23,6 @@ export default function perfInitScene(k) {
         setLineText("left", 6, "-----------------", "<INDEX")
         const toINDEX = handleInput(() => {
             k.go("index")
-            clearLines()
         })
 
         setLineText("right", 6, "-----------------", "N1 LIMIT>")
