@@ -20,7 +20,6 @@ export const displayContents = {
         5: { heading: "", text: "" },
         6: { heading: "", text: "" },
     },
-    // -----------------
     scratchpad: scratchpadText,
 }
 
