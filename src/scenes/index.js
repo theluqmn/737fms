@@ -10,13 +10,18 @@ export default function indexScene(k) {
         setTitle("INIT/REF INDEX");
         setPage(1,1)
 
-        setLineText("left", 1, "", "<IDENT")
+        setLineText("left", 1, "ONLY THIS WORKS", "<IDENT")
         const toIDENT = handleInput(() => {
             k.go("ident")
         })
 
         setLineText("left", 2, "", "<POS")
+
         setLineText("left", 3, "", "<PERF")
+        const toPERF = handleInput(() => {
+            k.go("perf-init")
+        })
+        
         setLineText("left", 4, "", "<TAKEOFF")
         setLineText("left", 5, "", "<APPROACH")
         setLineText("left", 6, "", "<OFFSET")
@@ -27,6 +32,7 @@ export default function indexScene(k) {
 
         k.onUpdate(() => {
             toIDENT(input.line.left[1])
+            toPERF(input.line.left[3])
         })
     });
 };

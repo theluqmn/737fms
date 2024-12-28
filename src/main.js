@@ -6,7 +6,8 @@ const k = kaplay({
 import introScene from "./scenes/intro";
 import identScene from "./scenes/ident";
 import indexScene from "./scenes";
+import perfInitScene from "./scenes/perfInit";
 introScene(k);
-identScene(k); indexScene(k);
+identScene(k); indexScene(k); perfInitScene(k);
 
 k.go("ident");
