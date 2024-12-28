@@ -1,5 +1,5 @@
 import { displayText } from "../components/display";
-import { scratchpadText } from "./inputEngine";
+import { clearScratchpadText, scratchpadText } from "./inputEngine";
 
 export const displayContents = {
     title: "",
@@ -34,7 +34,8 @@ export function setLineText(side, line, heading, text) {
 
 export function scratchpadInsert(side, line) {
     if (scratchpadText.length > 0) {
-        displayContents[side][line].text = displayContents.scratchpad;
+        displayContents[side][line].text = scratchpadText;
+        clearScratchpadText();
     }
 }
 

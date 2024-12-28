@@ -1,5 +1,5 @@
 import FMS from "../functions/fms";
-import { setTitle, setPage, setLineText, clearLines} from "../functions/displayEngine";
+import { setTitle, setPage, setLineText, clearLines, scratchpadInsert } from "../functions/displayEngine";
 import { input, handleInput } from "../functions/inputEngine";
 
 export default function perfInitScene(k) {
@@ -15,6 +15,9 @@ export default function perfInitScene(k) {
         setLineText("left", 3, " ZFW", "---.-")
         setLineText("left", 4, " RESERVES", "--.-")
         setLineText("left", 5, " COST INDEX", "---")
+        const addCostIndex = handleInput(() => {
+            scratchpadInsert("left", 5)
+        })
         
         setLineText("right", 1, "TRIP/CRZ ALT", "-----")
         setLineText("right", 2, "CRZ WIND", "---°/---")
@@ -29,6 +32,7 @@ export default function perfInitScene(k) {
 
         k.onUpdate(() => {
             toINDEX(input.line.left[6])
+            addCostIndex(input.line.left[5])
         })
     });
 };
