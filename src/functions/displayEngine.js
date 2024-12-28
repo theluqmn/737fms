@@ -1,26 +1,35 @@
 import { displayText } from "../components/display";
-import { inputText } from "./inputEngine";
+import { scratchpadText } from "./inputEngine";
 
 export const displayContents = {
     title: "IDENT",
     page: [1,1],
     left: {
-        1: { text: "737-800", heading: "MODEL" },
-        2: { text: "AIRAC-0304", heading: "NAV DATA" },
-        3: { text: "", heading: "" },
-        4: { text: "PMDG 737NG SU2", heading: "OP PROGRAM" },
-        5: { text: "(U10.4)", heading: "" },
-        6: { text: "<INDEX", heading: "-----------------" },
+        1: { heading: "MODEL", text: "737-800" },
+        2: { heading: "NAV DATA", text: "AIRAC-0304" },
+        3: { heading: "", text: "" },
+        4: { heading: "OP PROGRAM", text: "PMDG 737NG SU2" },
+        5: { heading: "", text: "(U10.4)" },
+        6: { heading: "-----------------", text: "<INDEX" },
     },
     right: {
-        1: { text: "25K", heading: "END RATING" },
-        2: { text: "/17AP/14MA/03", heading: "ACTIVE" },
-        3: { text: "", heading: "" },
-        4: { text: "", heading: "" },
-        5: { text: "", heading: "" },
-        6: { text: "POS INIT>", heading: "-----------------" },
+        1: { heading: "END RATING", text: "25K" },
+        2: { heading: "ACTIVE", text: "/17AP/14MA/03" },
+        3: { heading: "", text: "" },
+        4: { heading: "", text: "" },
+        5: { heading: "", text: "" },
+        6: { heading: "-----------------", text: "POS INIT>" },
     },
-    scratchpad: inputText,
+    scratchpad: scratchpadText,
+}
+
+export function setLineText(side, line, heading, text) {
+    displayContents[side][line].heading = heading;
+    displayContents[side][line].text = text;
+}
+
+export function setTitle(title) {
+    displayContents.title = title;
 }
 
 export function displayEngine(k) {
@@ -61,7 +70,7 @@ export function displayEngine(k) {
 
     k.onUpdate(() => {
         title.text = displayContents.title;
-        scratchpad.text = inputText;
+        scratchpad.text = scratchpadText;
 
         // page number
         if (displayContents.page[1] >= 2) {

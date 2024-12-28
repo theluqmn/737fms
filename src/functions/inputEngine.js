@@ -1,12 +1,12 @@
 
-let inputText = "";
+let scratchpadText = "";
 
 export function addInputText(input) {
-    inputText += input;
+    scratchpadText += input;
 }
 
 export function clearInputText() {
-    inputText = "";
+    scratchpadText = "";
 }
 
-export { inputText };
+export { scratchpadText };
