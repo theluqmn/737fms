@@ -2,30 +2,34 @@ import { displayText } from "../components/display";
 import { scratchpadText } from "./inputEngine";
 
 export const displayContents = {
-    title: "IDENT",
-    page: [1,1],
+    title: "",
+    page: [0,0],
     left: {
-        1: { heading: "MODEL", text: "737-800" },
-        2: { heading: "NAV DATA", text: "AIRAC-0304" },
-        3: { heading: "", text: "" },
-        4: { heading: "OP PROGRAM", text: "PMDG 737NG SU2" },
-        5: { heading: "", text: "(U10.4)" },
-        6: { heading: "-----------------", text: "<INDEX" },
-    },
-    right: {
-        1: { heading: "END RATING", text: "25K" },
-        2: { heading: "ACTIVE", text: "/17AP/14MA/03" },
+        1: { heading: "", text: "" },
+        2: { heading: "", text: "" },
         3: { heading: "", text: "" },
         4: { heading: "", text: "" },
         5: { heading: "", text: "" },
-        6: { heading: "-----------------", text: "POS INIT>" },
+        6: { heading: "", text: "" },
     },
+    right: {
+        1: { heading: "", text: "" },
+        2: { heading: "", text: "" },
+        3: { heading: "", text: "" },
+        4: { heading: "", text: "" },
+        5: { heading: "", text: "" },
+        6: { heading: "", text: "" },
+    },
+    // -----------------
     scratchpad: scratchpadText,
 }
 
 export function setLineText(side, line, heading, text) { displayContents[side][line].heading = heading; displayContents[side][line].text = text; };
 export function setTitle(title) { displayContents.title = title; };
-export function setPage(current, total) { displayContents.page[0] = current; displayContents.page[1] = total;  };
+export function setPage(current, total) {
+    displayContents.page[0] = current;
+    displayContents.page[1] = total; 
+};
 
 export function displayEngine(k) {
     const title = displayText(k, "left", "main", 160, "center", displayContents.title);
@@ -62,13 +66,12 @@ export function displayEngine(k) {
     const textRight5 = displayText(k, "right", "text", 360, "right", displayContents.right[5].text);
     const textRight6 = displayText(k, "right", "text", 400, "right", displayContents.right[6].text);
 
-
     k.onUpdate(() => {
         title.text = displayContents.title;
         scratchpad.text = scratchpadText;
 
         // page number
-        if (displayContents.page[1] >= 2) {
+        if (displayContents.page[0] >= 1) {
             page.text = displayContents.page[0] + "/" + displayContents.page[1];
         } else {
             page.text = "";
@@ -86,7 +89,7 @@ export function displayEngine(k) {
         headingRight3.text = displayContents.right[3].heading;
         headingRight4.text = displayContents.right[4].heading;
         headingRight5.text = displayContents.right[5].heading;
-        headingRight6.text
+        headingRight6.text = displayContents.right[6].heading;
         // left
         textLeft1.text = displayContents.left[1].text;
         textLeft2.text = displayContents.left[2].text;

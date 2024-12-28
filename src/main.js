@@ -3,9 +3,9 @@ const k = kaplay({
     background: [0,0,0]
 });
 
-import Intro from "./scenes/intro";
-import FMS from "./scenes/fms";
-Intro(k);
-FMS(k);
+import introScene from "./scenes/intro";
+import identScene from "./scenes/ident";
+introScene(k);
+identScene(k);
 
 k.go("intro");

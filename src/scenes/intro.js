@@ -1,4 +1,4 @@
-export default function Intro(k) {
+export default function introScene(k) {
     k.scene("intro", () => {
         // title and description
         const title = k.add([
@@ -105,7 +105,7 @@ It is recommended that you have a basic background in aviation to understand how
         // logic for buttons
         startButton.onHover(() => { startButton.color = k.rgb(225,225,225) });
         startButton.onHoverEnd(() => { startButton.color = k.rgb(255,255,255) });
-        startButton.onClick(() => { k.go("fms") });
+        startButton.onClick(() => { k.go("ident") });
 
         githubButton.onHover(() => { githubButton.color = k.rgb(225,225,225) });
         githubButton.onHoverEnd(() => { githubButton.color = k.rgb(255,255,255) });
