@@ -7,8 +7,8 @@ export default function perfInitScene(k) {
         FMS(k);
         clearLines();
 
-        setTitle("INIT/REF INDEX");
-        setPage(1,1)
+        setTitle("PERF INIT");
+        setPage(1,2)
 
         setLineText("left", 1, " GW/CRZ CG", "---.-/ 5.0")
         setLineText("left", 2, " PLAN/FUEL", "/ 4.8")
