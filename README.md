@@ -17,11 +17,12 @@ A web-based simulator of the Boeing 737-800's flight management system (FMS). Th
 - [x] intro
 - interface
   - [x] display engine
+  - [ ] input engine
   - buttons
     - [x] FMS display buttons
-    - [ ] function buttons
-    - [ ] numerical buttons
-    - [ ] alphabetical buttons
+    - [x] function buttons
+    - [x] numerical buttons
+    - [x] alphabetical buttons
 - logic
 
 ### State of the Project
