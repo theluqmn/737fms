@@ -1,3 +1,4 @@
+import { clear } from "console";
 import { displayText } from "../components/display";
 import { clearScratchpadText, scratchpadText } from "./inputEngine";
 
@@ -37,6 +38,11 @@ export function scratchpadInsert(side, line) {
         displayContents[side][line].text = scratchpadText;
         clearScratchpadText();
     }
+}
+
+export function scratchpadCopy(side, line) {
+    clearScratchpadText();
+    scratchpadText = displayContents[side][line].text;
 }
 
 export function clearLines() {
