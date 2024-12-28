@@ -1,6 +1,6 @@
 export function functionComponent(k) {
     const frame1 = k.add([
-        k.rect(420, 82, {
+        k.rect(420, 92, {
             radius: 6
         }),
         k.pos(300, 480),
@@ -9,7 +9,7 @@ export function functionComponent(k) {
     ]);
 
     const frame2 = k.add([
-        k.rect(138, 164, {
+        k.rect(138, 184, {
             radius: 6
         }),
         k.pos(159, 480),
@@ -23,25 +23,25 @@ export function functionComponent(k) {
     functionButton(k, 318, 490, 1, "CRZ");
     functionButton(k, 382, 490, 1, "DES");
 
-    functionButton(k, 126, 526, 1, "MENU");
-    functionButton(k, 190, 526, 1, "LEGS");
-    functionButton(k, 254, 526, 2, "DEP\nARR");
-    functionButton(k, 318, 526, 1, "HOLD");
-    functionButton(k, 382, 526, 1, "PROG");
+    functionButton(k, 126, 530, 1, "MENU");
+    functionButton(k, 190, 530, 1, "LEGS");
+    functionButton(k, 254, 530, 2, "DEP\nARR");
+    functionButton(k, 318, 530, 1, "HOLD");
+    functionButton(k, 382, 530, 1, "PROG");
 
-    functionButton(k, 466, 526, 1, "EXEC");
+    functionButton(k, 466, 530, 1, "EXEC");
 
-    functionButton(k, 126, 562, 2, "N1\nLIMIT");
-    functionButton(k, 190, 562, 1, "FIX");
+    functionButton(k, 126, 570, 2, "N1\nLIMIT");
+    functionButton(k, 190, 570, 1, "FIX");
 
-    functionButton(k, 126, 598, 2, "PREV\nPAGE");
-    functionButton(k, 190, 598, 2, "NEXT\nPAGE");
+    functionButton(k, 126, 610, 2, "PREV\nPAGE");
+    functionButton(k, 190, 610, 2, "NEXT\nPAGE");
 
 }
 
 function functionButton(k, x, y, lines, textInput, onClick) {
     const button = k.add([
-        k.rect(56, 28, {
+        k.rect(56, 32, {
             radius: 3
         }),
         k.pos(x, y),

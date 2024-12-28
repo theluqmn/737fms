@@ -1,21 +1,20 @@
 export default function Numerical(k) {
-    button(k, 115, 676, "1");
-    button(k, 160, 676, "2");
-    button(k, 205, 676, "3");
+    button(k, 115, 686, "1");
+    button(k, 160, 686, "2");
+    button(k, 205, 686, "3");
     // row 2
-    button(k, 115, 724, "4");
-    button(k, 160, 724, "5");
-    button(k, 205, 724, "6");
+    button(k, 115, 734, "4");
+    button(k, 160, 734, "5");
+    button(k, 205, 734, "6");
     // row 3
-    button(k, 115, 772, "7");
-    button(k, 160, 772, "8");
-    button(k, 205, 772, "9");
+    button(k, 115, 782, "7");
+    button(k, 160, 782, "8");
+    button(k, 205, 782, "9");
     // row 4
-    button(k, 115, 820, ".");
-    button(k, 160, 820, "0");
-    button(k, 205, 820, "+/=");
+    button(k, 115, 830, ".");
+    button(k, 160, 830, "0");
+    button(k, 205, 830, "+/=");
 }
-
 function button(k, x, y, textInput, onClick) {
     let size = 24;
     let adjust = 8;

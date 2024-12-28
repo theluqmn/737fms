@@ -1,43 +1,42 @@
 export default function Alphabetical(k) {
     // row 1
-    button(k, 266, 580, "A");
-    button(k, 319, 580, "B");
-    button(k, 372, 580, "C");
-    button(k, 425, 580, "D");
-    button(k, 478, 580, "E");
+    button(k, 266, 590, "A");
+    button(k, 319, 590, "B");
+    button(k, 372, 590, "C");
+    button(k, 425, 590, "D");
+    button(k, 478, 590, "E");
     // row 2
-    button(k, 266, 628, "F");
-    button(k, 319, 628, "G");
-    button(k, 372, 628, "H");
-    button(k, 425, 628, "I");
-    button(k, 478, 628, "J");
+    button(k, 266, 638, "F");
+    button(k, 319, 638, "G");
+    button(k, 372, 638, "H");
+    button(k, 425, 638, "I");
+    button(k, 478, 638, "J");
     // row 3
-    button(k, 266, 676, "K");
-    button(k, 319, 676, "L");
-    button(k, 372, 676, "M");
-    button(k, 425, 676, "N");
-    button(k, 478, 676, "O");
+    button(k, 266, 686, "K");
+    button(k, 319, 686, "L");
+    button(k, 372, 686, "M");
+    button(k, 425, 686, "N");
+    button(k, 478, 686, "O");
     // row 4
-    button(k, 266, 724, "P");
-    button(k, 319, 724, "Q");
-    button(k, 372, 724, "R");
-    button(k, 425, 724, "S");
-    button(k, 478, 724, "T");
+    button(k, 266, 734, "P");
+    button(k, 319, 734, "Q");
+    button(k, 372, 734, "R");
+    button(k, 425, 734, "S");
+    button(k, 478, 734, "T");
     // row 5
-    button(k, 266, 772, "U");
-    button(k, 319, 772, "V");
-    button(k, 372, 772, "W");
-    button(k, 425, 772, "X");
-    button(k, 478, 772, "Y");
+    button(k, 266, 782, "U");
+    button(k, 319, 782, "V");
+    button(k, 372, 782, "W");
+    button(k, 425, 782, "X");
+    button(k, 478, 782, "Y");
 
     // row 6
-    button(k, 266, 820, "Z");
-    button(k, 319, 820, "SP");
-    button(k, 372, 820, "DEL");
-    button(k, 425, 820, "/");
-    button(k, 478, 820, "CLR");
+    button(k, 266, 830, "Z");
+    button(k, 319, 830, "SP");
+    button(k, 372, 830, "DEL");
+    button(k, 425, 830, "/");
+    button(k, 478, 830, "CLR");
 }
-
 function button(k, x, y, textInput, onClick) {
     let size = 22;
     let adjust = 10;
