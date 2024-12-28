@@ -29,7 +29,6 @@ export default function Alphabetical(k) {
     button(k, 372, 782, "W");
     button(k, 425, 782, "X");
     button(k, 478, 782, "Y");
-
     // row 6
     button(k, 266, 830, "Z");
     button(k, 319, 830, "SP");
