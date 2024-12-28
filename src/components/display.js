@@ -21,21 +21,15 @@ export function displayComponent(k) {
     ]);
 
     // left side
-    const buttonLeft1 = lineSelectKey(k, "left", 80, 200, () => {
-        displayContents.title = "TEST";
-    });
+    const buttonLeft1 = lineSelectKey(k, "left", 80, 200);
     // const textLeftPrimary1 = displayText(k, "left", "primary", 200, "left", "TEST");
     // const textLeftSecondary1 = displayText(k, "left", "secondary", 200, "left", "SECONDARY");
 
-    const buttonLeft2 = lineSelectKey(k, "left", 80, 240, () => {
-        displayContents.title = "BOEING 737NG";
-    });
+    const buttonLeft2 = lineSelectKey(k, "left", 80, 240);
     // const textLeftPrimary2 = displayText(k, "left", "primary", 240, "left", "<DISCORD");
     // const textLeftSecondary2 = displayText(k, "left", "secondary", 240, "left", "SOCIAL MEDIA");
 
-    const buttonLeft3 = lineSelectKey(k, "left", 80, 280, () => {
-        displayContents.title = "HIGHSEAS";
-    });
+    const buttonLeft3 = lineSelectKey(k, "left", 80, 280);
     // const textLeftPrimary3 = displayText(k, "left", "primary", 280, "left", "<HIGHSEAS");
 
     const buttonLeft4 = lineSelectKey(k, "left", 80, 320);

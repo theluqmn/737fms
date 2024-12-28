@@ -2,23 +2,23 @@ import { displayText } from "../components/display";
 import { inputText } from "./inputEngine";
 
 export const displayContents = {
-    title: "Boeing 737NG FMS",
+    title: "IDENT",
     page: [1,1],
     left: {
-        1: { text: "<TEST", heading: " SET TITLE" },
-        2: { text: "<BOEING 737NG", heading: "" },
-        3: { text: "<HIGHSEAS", heading: "" },
-        4: { text: "", heading: "" },
-        5: { text: "", heading: "" },
-        6: { text: "", heading: "-----------------" },
+        1: { text: "737-800", heading: "MODEL" },
+        2: { text: "AIRAC-0304", heading: "NAV DATA" },
+        3: { text: "", heading: "" },
+        4: { text: "PMDG 737NG SU2", heading: "OP PROGRAM" },
+        5: { text: "(U10.4)", heading: "" },
+        6: { text: "<INDEX", heading: "-----------------" },
     },
     right: {
-        1: { text: "GITHUB>", heading: "LINKS" },
-        2: { text: "ITCH.IO>", heading: "" },
-        3: { text: "DEMO>", heading: "" },
-        4: { text: "DOCUMENTATION>", heading: "" },
-        5: { text: "YOUTUBE TUTOR>", heading: "" },
-        6: { text: "START>", heading: "-----------------" },
+        1: { text: "25K", heading: "END RATING" },
+        2: { text: "/17AP/14MA/03", heading: "ACTIVE" },
+        3: { text: "", heading: "" },
+        4: { text: "", heading: "" },
+        5: { text: "", heading: "" },
+        6: { text: "POS INIT>", heading: "-----------------" },
     },
     scratchpad: inputText,
 }
@@ -61,7 +61,7 @@ export function displayEngine(k) {
 
     k.onUpdate(() => {
         title.text = displayContents.title;
-        scratchpad.text = displayContents.scratchpad;
+        scratchpad.text = inputText;
 
         // page number
         if (displayContents.page[1] >= 2) {

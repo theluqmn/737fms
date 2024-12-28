@@ -1,10 +1,11 @@
+import { addInputText } from "../functions/inputEngine";
 export default function Alphabetical(k) {
     // row 1
-    button(k, 266, 590, "A");
-    button(k, 319, 590, "B");
-    button(k, 372, 590, "C");
-    button(k, 425, 590, "D");
-    button(k, 478, 590, "E");
+    const A = button(k, 266, 590, "A", () => { addInputText("A"); });
+    button(k, 319, 590, "B", () => { addInputText("B"); });
+    button(k, 372, 590, "C", () => { addInputText("C"); });
+    button(k, 425, 590, "D", () => { addInputText("D"); });
+    button(k, 478, 590, "E", () => { addInputText("E"); });
     // row 2
     button(k, 266, 638, "F");
     button(k, 319, 638, "G");
