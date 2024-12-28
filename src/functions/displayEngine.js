@@ -32,10 +32,11 @@ export function setLineText(side, line, heading, text) {
     displayContents[side][line].text = text;
 };
 
-export function setPage(current, total) {
-    displayContents.page[0] = current;
-    displayContents.page[1] = total; 
-};
+export function scratchpadInsert(side, line) {
+    if (scratchpadText.length > 0) {
+        displayContents[side][line].text = displayContents.scratchpad;
+    }
+}
 
 export function clearLines() {
     displayContents.title = ""
@@ -47,6 +48,11 @@ export function clearLines() {
         displayContents.right[i] = { heading: "", text: ""}
     }
 }
+
+export function setPage(current, total) {
+    displayContents.page[0] = current;
+    displayContents.page[1] = total; 
+};
 
 export function displayEngine(k) {
     let left = displayContents.left
