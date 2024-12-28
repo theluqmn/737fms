@@ -10,4 +10,4 @@ import perfInitScene from "./scenes/perfInit";
 introScene(k);
 identScene(k); indexScene(k); perfInitScene(k);
 
-k.go("ident");
+k.go("intro");
