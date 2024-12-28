@@ -1,9 +1,7 @@
 import { initDisplay } from "../components/display";
-import { displayEngine } from "../functions/displayEngine";
-import { frameComponent } from "../components/frame";
-import { functionComponent } from "../components/functions";
-import Alphabetical from "../components/alphabetical";
-import Numerical from "../components/numerical";
+import { initModes } from "../components/modes";
+import { initAlphabetical } from "../components/alphabetical"
+import { initNumerical } from "../components/numerical";
 
 export default function FMS(k) {
     k.scene("fms", () => {
@@ -28,12 +26,27 @@ export default function FMS(k) {
             k.anchor("top")
         ]);
 
-        frameComponent(k);
-        functionComponent(k);
-        initDisplay(k);
+        const frame = k.add([
+            k.rect(500, 800, {
+                radius: 20
+            }),
+            k.pos(300, 100),
+            k.color(20,20,20),
+            k.anchor("top")
+        ]);
+    
+        const plate = k.add([
+            k.rect(480, 780, {
+                radius: 15
+            }),
+            k.pos(300, 110),
+            k.color(30,30,30),
+            k.anchor("top")
+        ]);
 
-        displayEngine(k);
-        Alphabetical(k);
-        Numerical(k);
+        initDisplay(k);
+        initModes(k);
+        initAlphabetical(k);
+        initNumerical(k);
     });
 };

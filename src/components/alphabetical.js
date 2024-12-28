@@ -1,8 +1,8 @@
 import { alphabeticalKeys } from "./keys";
 
-export default function Alphabetical(k) {
+export function initAlphabetical(k) {
     // row 1
-    const A = alphabeticalKeys(k, 266, 590, "A");
+    alphabeticalKeys(k, 266, 590, "A");
     alphabeticalKeys(k, 319, 590, "B");
     alphabeticalKeys(k, 372, 590, "C");
     alphabeticalKeys(k, 425, 590, "D");

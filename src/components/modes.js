@@ -1,6 +1,6 @@
 import { inputRegister, inputTimeout } from "../functions/inputEngine";
 
-export function functionComponent(k) {
+export function initModes(k) {
     const frame1 = k.add([
         k.rect(420, 92, {
             radius: 6

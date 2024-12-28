@@ -1,6 +1,6 @@
 import { numericalKeys } from "./keys";
 
-export default function Numerical(k) {
+export function initNumerical(k) {
     numericalKeys(k, 115, 686, "1");
     numericalKeys(k, 160, 686, "2");
     numericalKeys(k, 205, 686, "3");
