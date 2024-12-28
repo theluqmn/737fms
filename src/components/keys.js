@@ -139,7 +139,7 @@ function modeKeys(k, x, y, lines, textInput) {
     });
 }
 
-export function lineSelectKey(k, side, pos) {
+export function lineSelectKey(k, side, pos, activated) {
     let x;
     let y = 160 + (pos * 40)
     if (side == "left") {

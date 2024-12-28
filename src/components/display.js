@@ -35,7 +35,7 @@ export function initDisplay(k) {
     const r6 = lineSelectKey(k, "right", 6);
 }
 
-export function displayText(k, side, type, pos, align, textInput) {
+export function displayText(k, side, type, pos, align, textInput, activated) {
     let size;
     let x;
     let width = 180;
@@ -69,6 +69,8 @@ export function displayText(k, side, type, pos, align, textInput) {
 
     if (type == "heading") {
         text.color = k.rgb(200,200,200);
+    } else if (activated == false) {
+        text.color = k.rgb(125,125,125)
     }
 
     return text;

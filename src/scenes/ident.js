@@ -19,12 +19,12 @@ export default function identScene(k) {
         setLineText("left", 6, "-----------------", "<INDEX")
         setLineText("right", 6, "-----------------", "POS INIT>")
 
-        const toIndex = handleInput(() => {
+        const toINDEX = handleInput(() => {
             k.go("index")
         })
 
         k.onUpdate(() => {
-            toIndex(input.line.left[6])
+            toINDEX(input.line.left[6])
         })
     });
 };
