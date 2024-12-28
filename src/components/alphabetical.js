@@ -1,4 +1,4 @@
-import { addInputText } from "../functions/inputEngine";
+import { addInputText, clearInputText } from "../functions/inputEngine";
 export default function Alphabetical(k) {
     // row 1
     const A = button(k, 266, 590, "A", () => { addInputText("A"); });
@@ -7,35 +7,35 @@ export default function Alphabetical(k) {
     button(k, 425, 590, "D", () => { addInputText("D"); });
     button(k, 478, 590, "E", () => { addInputText("E"); });
     // row 2
-    button(k, 266, 638, "F");
-    button(k, 319, 638, "G");
-    button(k, 372, 638, "H");
-    button(k, 425, 638, "I");
-    button(k, 478, 638, "J");
+    button(k, 266, 638, "F", () => { addInputText("F"); });
+    button(k, 319, 638, "G", () => { addInputText("G"); });
+    button(k, 372, 638, "H", () => { addInputText("H"); });
+    button(k, 425, 638, "I", () => { addInputText("I"); });
+    button(k, 478, 638, "J", () => { addInputText("J"); });
     // row 3
-    button(k, 266, 686, "K");
-    button(k, 319, 686, "L");
-    button(k, 372, 686, "M");
-    button(k, 425, 686, "N");
-    button(k, 478, 686, "O");
+    button(k, 266, 686, "K", () => { addInputText("K"); });
+    button(k, 319, 686, "L", () => { addInputText("L"); });
+    button(k, 372, 686, "M", () => { addInputText("M"); });
+    button(k, 425, 686, "N", () => { addInputText("N"); });
+    button(k, 478, 686, "O", () => { addInputText("O"); });
     // row 4
-    button(k, 266, 734, "P");
-    button(k, 319, 734, "Q");
-    button(k, 372, 734, "R");
-    button(k, 425, 734, "S");
-    button(k, 478, 734, "T");
+    button(k, 266, 734, "P", () => { addInputText("P"); });
+    button(k, 319, 734, "Q", () => { addInputText("Q"); });
+    button(k, 372, 734, "R", () => { addInputText("R"); });
+    button(k, 425, 734, "S", () => { addInputText("S"); });
+    button(k, 478, 734, "T", () => { addInputText("T"); });
     // row 5
-    button(k, 266, 782, "U");
-    button(k, 319, 782, "V");
-    button(k, 372, 782, "W");
-    button(k, 425, 782, "X");
-    button(k, 478, 782, "Y");
+    button(k, 266, 782, "U", () => { addInputText("U"); });
+    button(k, 319, 782, "V", () => { addInputText("V"); });
+    button(k, 372, 782, "W", () => { addInputText("W"); });
+    button(k, 425, 782, "X", () => { addInputText("X"); });
+    button(k, 478, 782, "Y", () => { addInputText("Y"); });
     // row 6
-    button(k, 266, 830, "Z");
+    button(k, 266, 830, "Z", () => { addInputText("Z"); });
     button(k, 319, 830, "SP");
     button(k, 372, 830, "DEL");
-    button(k, 425, 830, "/");
-    button(k, 478, 830, "CLR");
+    button(k, 425, 830, "/", () => { addInputText("/"); });
+    button(k, 478, 830, "CLR", () => { clearInputText(); });
 }
 function button(k, x, y, textInput, onClick) {
     let size = 22;
