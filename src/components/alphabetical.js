@@ -1,94 +1,40 @@
-import { addInputText, clearInputText } from "../functions/inputEngine";
+import { alphabeticalKeys } from "./keys";
+
 export default function Alphabetical(k) {
     // row 1
-    const A = button(k, 266, 590, "A", () => { addInputText("A"); });
-    button(k, 319, 590, "B", () => { addInputText("B"); });
-    button(k, 372, 590, "C", () => { addInputText("C"); });
-    button(k, 425, 590, "D", () => { addInputText("D"); });
-    button(k, 478, 590, "E", () => { addInputText("E"); });
+    const A = alphabeticalKeys(k, 266, 590, "A");
+    alphabeticalKeys(k, 319, 590, "B");
+    alphabeticalKeys(k, 372, 590, "C");
+    alphabeticalKeys(k, 425, 590, "D");
+    alphabeticalKeys(k, 478, 590, "E");
     // row 2
-    button(k, 266, 638, "F", () => { addInputText("F"); });
-    button(k, 319, 638, "G", () => { addInputText("G"); });
-    button(k, 372, 638, "H", () => { addInputText("H"); });
-    button(k, 425, 638, "I", () => { addInputText("I"); });
-    button(k, 478, 638, "J", () => { addInputText("J"); });
+    alphabeticalKeys(k, 266, 638, "F");
+    alphabeticalKeys(k, 319, 638, "G");
+    alphabeticalKeys(k, 372, 638, "H");
+    alphabeticalKeys(k, 425, 638, "I");
+    alphabeticalKeys(k, 478, 638, "J");
     // row 3
-    button(k, 266, 686, "K", () => { addInputText("K"); });
-    button(k, 319, 686, "L", () => { addInputText("L"); });
-    button(k, 372, 686, "M", () => { addInputText("M"); });
-    button(k, 425, 686, "N", () => { addInputText("N"); });
-    button(k, 478, 686, "O", () => { addInputText("O"); });
+    alphabeticalKeys(k, 266, 686, "K");
+    alphabeticalKeys(k, 319, 686, "L");
+    alphabeticalKeys(k, 372, 686, "M");
+    alphabeticalKeys(k, 425, 686, "N");
+    alphabeticalKeys(k, 478, 686, "O");
     // row 4
-    button(k, 266, 734, "P", () => { addInputText("P"); });
-    button(k, 319, 734, "Q", () => { addInputText("Q"); });
-    button(k, 372, 734, "R", () => { addInputText("R"); });
-    button(k, 425, 734, "S", () => { addInputText("S"); });
-    button(k, 478, 734, "T", () => { addInputText("T"); });
+    alphabeticalKeys(k, 266, 734, "P");
+    alphabeticalKeys(k, 319, 734, "Q");
+    alphabeticalKeys(k, 372, 734, "R");
+    alphabeticalKeys(k, 425, 734, "S");
+    alphabeticalKeys(k, 478, 734, "T");
     // row 5
-    button(k, 266, 782, "U", () => { addInputText("U"); });
-    button(k, 319, 782, "V", () => { addInputText("V"); });
-    button(k, 372, 782, "W", () => { addInputText("W"); });
-    button(k, 425, 782, "X", () => { addInputText("X"); });
-    button(k, 478, 782, "Y", () => { addInputText("Y"); });
+    alphabeticalKeys(k, 266, 782, "U");
+    alphabeticalKeys(k, 319, 782, "V");
+    alphabeticalKeys(k, 372, 782, "W");
+    alphabeticalKeys(k, 425, 782, "X");
+    alphabeticalKeys(k, 478, 782, "Y");
     // row 6
-    button(k, 266, 830, "Z", () => { addInputText("Z"); });
-    button(k, 319, 830, "SP");
-    button(k, 372, 830, "DEL");
-    button(k, 425, 830, "/", () => { addInputText("/"); });
-    button(k, 478, 830, "CLR", () => { clearInputText(); });
-}
-function alphabeticalKeys(k, x, y, textInput, onClick) {
-    let size = 22;
-    let adjust = 10;
-
-    const button = k.add([
-        k.rect(38, 38, {
-            radius: 3
-        }),
-        k.pos(x, y),
-        k.color(10,10,10),
-        k.anchor("top"),
-        k.area(),
-        k.pos(x, y),
-        k.scale(1),
-        k.anchor("top")
-    ]);
-
-    switch (textInput) {
-        case "CLR":
-            size = 15;
-            adjust = 12;
-            break;
-        case "DEL":
-            size = 15;
-            adjust = 12;
-            break;
-        case "SP":
-            size = 15;
-            adjust = 12;
-            break;
-    }
-
-    const text = k.add([
-        k.text(textInput, {
-            font: "arial",
-            size: size,
-            width: 56,
-            align: "center"
-        }),
-        k.pos(x, y + adjust),
-        k.color(255,255,255),
-        k.anchor("top"),
-        k.scale(1)
-    ]);
-
-    button.onClick(() => {
-        button.scaleTo(0.95);
-        text.scaleTo(0.95);
-        setTimeout(() => {
-            button.scaleTo(1);
-            text.scaleTo(1);
-            if (onClick) onClick(); // Run the callback function if it's provided
-        }, 100);
-    });
+    alphabeticalKeys(k, 266, 830, "Z");
+    alphabeticalKeys(k, 319, 830, "SP");
+    alphabeticalKeys(k, 372, 830, "DEL");
+    alphabeticalKeys(k, 425, 830, "/");
+    alphabeticalKeys(k, 478, 830, "CLR");
 }

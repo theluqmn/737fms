@@ -1,4 +1,6 @@
-export function alphabeticalKeys(k, x, y, textInput, onClick) {
+import { inputRegister, inputTimeout } from "../functions/inputEngine";
+
+export function alphabeticalKeys(k, x, y, textInput) {
     let size = 22;
     let adjust = 10;
 
@@ -46,10 +48,11 @@ export function alphabeticalKeys(k, x, y, textInput, onClick) {
     button.onClick(() => {
         button.scaleTo(0.95);
         text.scaleTo(0.95);
+        inputRegister("alphabetical", textInput);
         setTimeout(() => {
             button.scaleTo(1);
             text.scaleTo(1);
-            if (onClick) onClick(); // Run the callback function if it's provided
+            inputTimeout("alphabetical", textInput)
         }, 100);
     });
 }
