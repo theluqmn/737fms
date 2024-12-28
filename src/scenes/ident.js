@@ -1,5 +1,6 @@
 import FMS from "../functions/fms";
-import { setTitle, setPage, setLineText, displayContents } from "../functions/displayEngine";
+import { setTitle, setPage, setLineText} from "../functions/displayEngine";
+import { input, handleInput } from "../functions/inputEngine";
 
 export default function identScene(k) {
     k.scene("ident", () => {
@@ -18,5 +19,12 @@ export default function identScene(k) {
         setLineText("left", 6, "-----------------", "<INDEX")
         setLineText("right", 6, "-----------------", "POS INIT>")
 
+        const toIndex = handleInput(() => {
+            console.log("index")
+        })
+
+        k.onUpdate(() => {
+            toIndex(input.line.left[6])
+        })
     });
 };

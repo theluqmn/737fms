@@ -35,6 +35,21 @@ let input = {
 export function lineSelectKeyRegister(side, line) { input.line[side][line] = true; console.log(`${side} ${line} key registered`); };
 export function lineSelectKeyTimeout(side, line) { input.line[side][line] = false; };
 
+export function handleInput(callback) {
+    let isProcessing = false;
+    
+    return (condition) => {
+        if (condition && !isProcessing) {
+            isProcessing = true;
+            callback();
+            
+            setTimeout(() => {
+                isProcessing = false;
+            }, 200);
+        }
+    };
+}
+
 export function inputRegister(type, key) {
     if (type == "alphabetical") {
         input.alphabetical[key] = true;
