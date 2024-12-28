@@ -9,23 +9,7 @@ A web-based simulator of the Boeing 737-800's flight management system (FMS). Th
 > [!WARNING]
 > This project is not designed for mobile devices.
 
-## To-Do
-
-### Features
-
-- [x] kaplay setup
-- [x] intro
-- interface
-  - [x] display engine
-  - [x] input engine
-  - buttons
-    - [x] FMS display buttons
-    - [x] function buttons
-    - [x] numerical buttons
-    - [x] alphabetical buttons
-- logic
-
-### State of the Project
+## State of the Project
 
 In active development. Rate of progress varies since I work on several projects at once.
 
