@@ -23,8 +23,16 @@ export const displayContents = {
     scratchpad: scratchpadText,
 }
 
-export function setLineText(side, line, heading, text) { displayContents[side][line].heading = heading; displayContents[side][line].text = text; };
-export function setTitle(title) { displayContents.title = title; };
+export function setTitle(title) {
+    displayContents.title = title;
+};
+
+export function setLineText(side, line, heading, text, activated) {
+    displayContents[side][line].heading = heading;
+    displayContents[side][line].text = text;
+    displayContents[side][line].activated = activated
+};
+
 export function setPage(current, total) {
     displayContents.page[0] = current;
     displayContents.page[1] = total; 
