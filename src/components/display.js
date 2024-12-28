@@ -69,7 +69,9 @@ export function displayText(k, side, type, pos, align, textInput, activated) {
 
     if (type == "heading") {
         text.color = k.rgb(200,200,200);
-    } else if (activated == false) {
+    }
+
+    if (activated == false) {
         text.color = k.rgb(125,125,125)
     }
 

@@ -6,7 +6,7 @@ export default function indexScene(k) {
     k.scene("index", () => {
         FMS(k);
         clearLines();
-        
+
         setTitle("INIT/REF INDEX");
         setPage(1,1)
 
@@ -15,7 +15,7 @@ export default function indexScene(k) {
             k.go("ident")
         })
 
-        setLineText("left", 2, "", "<POS4", false)
+        setLineText("left", 2, "", "<POS")
         setLineText("left", 3, "", "<PERF")
         setLineText("left", 4, "", "<TAKEOFF")
         setLineText("left", 5, "", "<APPROACH")

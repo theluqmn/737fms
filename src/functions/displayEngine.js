@@ -5,20 +5,20 @@ export const displayContents = {
     title: "",
     page: [0,0],
     left: {
-        1: { heading: "", text: "", activated: true },
-        2: { heading: "", text: "", activated: true },
-        3: { heading: "", text: "", activated: true },
-        4: { heading: "", text: "", activated: true },
-        5: { heading: "", text: "", activated: true },
-        6: { heading: "", text: "", activated: true },
+        1: { heading: "", text: ""},
+        2: { heading: "", text: ""},
+        3: { heading: "", text: ""},
+        4: { heading: "", text: ""},
+        5: { heading: "", text: ""},
+        6: { heading: "", text: ""},
     },
     right: {
-        1: { heading: "", text: "", activated: true },
-        2: { heading: "", text: "", activated: true },
-        3: { heading: "", text: "", activated: true },
-        4: { heading: "", text: "", activated: true },
-        5: { heading: "", text: "", activated: true },
-        6: { heading: "", text: "", activated: true },
+        1: { heading: "", text: ""},
+        2: { heading: "", text: ""},
+        3: { heading: "", text: ""},
+        4: { heading: "", text: ""},
+        5: { heading: "", text: ""},
+        6: { heading: "", text: ""},
     },
     scratchpad: scratchpadText,
 }
@@ -27,10 +27,9 @@ export function setTitle(title) {
     displayContents.title = title;
 };
 
-export function setLineText(side, line, heading, text, activated) {
+export function setLineText(side, line, heading, text) {
     displayContents[side][line].heading = heading;
     displayContents[side][line].text = text;
-    displayContents[side][line].activated = activated
 };
 
 export function setPage(current, total) {
@@ -44,8 +43,8 @@ export function clearLines() {
     displayContents.scratchpad = ""
     
     for (let i = 1; i <= 6; i++) {
-        displayContents.left[i] = { heading: "", text: "", activated: true }
-        displayContents.right[i] = { heading: "", text: "", activated: true }
+        displayContents.left[i] = { heading: "", text: ""}
+        displayContents.right[i] = { heading: "", text: ""}
     }
 }
 
@@ -65,12 +64,12 @@ export function displayEngine(k) {
     const headingLeft5 = displayText(k, "left", "heading", 360, "left", left[5].heading);
     const headingLeft6 = displayText(k, "left", "heading", 400, "left", left[6].heading);
 
-    const textLeft1 = displayText(k, "left", "text", 200, "left", left[1].text, left[1].activated);
-    const textLeft2 = displayText(k, "left", "text", 240, "left", left[2].text, left[2].activated);
-    const textLeft3 = displayText(k, "left", "text", 280, "left", left[3].text, left[3].activated);
-    const textLeft4 = displayText(k, "left", "text", 320, "left", left[4].text, left[4].activated);
-    const textLeft5 = displayText(k, "left", "text", 360, "left", left[5].text, left[5].activated);
-    const textLeft6 = displayText(k, "left", "text", 400, "left", left[6].text, left[6].activated);
+    const textLeft1 = displayText(k, "left", "text", 200, "left", left[1].text);
+    const textLeft2 = displayText(k, "left", "text", 240, "left", left[2].text);
+    const textLeft3 = displayText(k, "left", "text", 280, "left", left[3].text);
+    const textLeft4 = displayText(k, "left", "text", 320, "left", left[4].text);
+    const textLeft5 = displayText(k, "left", "text", 360, "left", left[5].text);
+    const textLeft6 = displayText(k, "left", "text", 400, "left", left[6].text);
 
     // right side
     const headingRight1 = displayText(k, "right", "heading", 200, "right", right[1].heading);
@@ -80,12 +79,12 @@ export function displayEngine(k) {
     const headingRight5 = displayText(k, "right", "heading", 360, "right", right[5].heading);
     const headingRight6 = displayText(k, "right", "heading", 400, "right", right[6].heading);
 
-    const textRight1 = displayText(k, "right", "text", 200, "right", right[1].text, right[1].activated);
-    const textRight2 = displayText(k, "right", "text", 240, "right", right[2].text, right[1].activated);
-    const textRight3 = displayText(k, "right", "text", 280, "right", right[3].text, right[1].activated);
-    const textRight4 = displayText(k, "right", "text", 320, "right", right[4].text, right[1].activated);
-    const textRight5 = displayText(k, "right", "text", 360, "right", right[5].text, right[1].activated);
-    const textRight6 = displayText(k, "right", "text", 400, "right", right[6].text, right[1].activated);
+    const textRight1 = displayText(k, "right", "text", 200, "right", right[1].text);
+    const textRight2 = displayText(k, "right", "text", 240, "right", right[2].text);
+    const textRight3 = displayText(k, "right", "text", 280, "right", right[3].text);
+    const textRight4 = displayText(k, "right", "text", 320, "right", right[4].text);
+    const textRight5 = displayText(k, "right", "text", 360, "right", right[5].text);
+    const textRight6 = displayText(k, "right", "text", 400, "right", right[6].text);
 
     k.onUpdate(() => {
         title.text = displayContents.title;
@@ -98,7 +97,7 @@ export function displayEngine(k) {
             page.text = "";
         }
 
-        // right
+        // heading
         headingLeft1.text = left[1].heading;
         headingLeft2.text = left[2].heading;
         headingLeft3.text = left[3].heading;
@@ -111,7 +110,7 @@ export function displayEngine(k) {
         headingRight4.text = right[4].heading;
         headingRight5.text = right[5].heading;
         headingRight6.text = right[6].heading;
-        // left
+        // text
         textLeft1.text = left[1].text;
         textLeft2.text = left[2].text;
         textLeft3.text = left[3].text;
