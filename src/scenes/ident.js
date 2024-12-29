@@ -1,6 +1,6 @@
 import FMS from "../functions/fms";
 import { setTitle, setPage, setLineText, clearLines} from "../functions/displayEngine";
-import { input, handleInput } from "../functions/inputEngine";
+import { input, handleInput, lineSelectKeyTimeout } from "../functions/inputEngine";
 
 export default function identScene(k) {
     k.scene("ident", () => {
@@ -57,11 +57,13 @@ and CLR to clear the scratchpad.
         setLineText("left", 6, "-----------------", "<INDEX")
         const toINDEX = handleInput(() => {
             k.go("index")
+            lineSelectKeyTimeout("left", 6)
         })
 
         setLineText("right", 6, "-----------------", "POS INIT>")
         const toPOSINIT = handleInput(() => {
             k.go("pos-init-1")
+            lineSelectKeyTimeout("right", 6)
         })
 
         k.onUpdate(() => {

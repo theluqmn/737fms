@@ -1,6 +1,6 @@
 import FMS from "../functions/fms";
 import { setTitle, setPage, setLineText, clearLines} from "../functions/displayEngine";
-import { input, handleInput } from "../functions/inputEngine";
+import { input, handleInput, lineSelectKeyTimeout } from "../functions/inputEngine";
 
 export default function indexScene(k) {
     k.scene("index", () => {
@@ -33,6 +33,7 @@ on the display's texts.
         setLineText("left", 1, "", "<IDENT")
         const toIDENT = handleInput(() => {
             k.go("ident")
+            lineSelectKeyTimeout("left", 1)
         })
 
         setLineText("left", 2, "", "<POS")
@@ -40,6 +41,7 @@ on the display's texts.
         setLineText("left", 3, "", "<PERF")
         const toPERF = handleInput(() => {
             k.go("perf-init")
+            lineSelectKeyTimeout("left", 3)
         })
         
         setLineText("left", 4, "", "<TAKEOFF")
