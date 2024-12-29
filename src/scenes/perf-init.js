@@ -29,9 +29,14 @@ export default function perfInitScene(k) {
         })
 
         setLineText("right", 6, "-----------------", "N1 LIMIT>")
+        const toN1LIMIT = handleInput(() => {
+            k.go("n1-limit")
+        })
 
         k.onUpdate(() => {
             toINDEX(input.line.left[6])
+            toN1LIMIT(input.line.right[6])
+            
             addCostIndex(input.line.left[5])
         })
     });
