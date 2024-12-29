@@ -7,7 +7,7 @@ import { inputRegister, inputTimeout } from "./inputEngine";
 
 export default function FMS(k) {
     k.add([
-        k.text("Boeing 737NG\nFlight Management Computer", {
+        k.text("Boeing 737NG\nFlight Management System", {
             font: "consolas",
             size: 30,
         }),
