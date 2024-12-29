@@ -10,6 +10,22 @@ export default function indexScene(k) {
         setTitle("INIT/REF INDEX");
         setPage(1,1)
 
+        k.add([
+            k.text(`
+INDEX
+
+A list of all the available index pages.
+
+Ones that are functioning (opens the respective page):
+- IDENT
+- PERF
+                `, {
+                    font: "Arial",
+                    size: 18,
+                }),
+            k.pos(600, 100)
+        ])
+
         setLineText("left", 1, "", "<IDENT")
         const toIDENT = handleInput(() => {
             k.go("ident")
