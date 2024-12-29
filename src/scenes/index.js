@@ -19,6 +19,10 @@ A list of all the available index pages.
 Ones that are functioning (opens the respective page):
 - IDENT
 - PERF
+
+WARNING: The PERF page is extremely buggy due to an
+issue with kaplayjs. Visiting the page will wreak havoc
+on the display's texts.
                 `, {
                     font: "Arial",
                     size: 18,

@@ -15,7 +15,7 @@ export default function FMS(k) {
     ])
 
     k.add([
-        k.text("proudly made using kaplayjs", {
+        k.text("proudly made using kaplayjs - designed and developed by luqman", {
             font: "consolas",
             size: 18,
             width: 500
