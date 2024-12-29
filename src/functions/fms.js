@@ -3,6 +3,7 @@ import { initModes } from "../components/modes";
 import { initAlphabetical } from "../components/alphabetical"
 import { initNumerical } from "../components/numerical";
 import { displayEngine } from "../functions/displayEngine";
+import { inputRegister, inputTimeout } from "./inputEngine";
 
 export default function FMS(k) {
     k.add([
@@ -42,6 +43,40 @@ export default function FMS(k) {
         k.color(30,30,30),
         k.anchor("top")
     ]);
+
+    k.onKeyPressRepeat((e) => {
+        let type;
+        if (e== "space") {
+            inputRegister("alphabetical", "SP");
+            setTimeout(() => {
+                inputTimeout("alphabetical", "SP");
+            }, 100);
+            return;
+        } else if (e == "backspace") {
+            inputRegister("alphabetical", "DEL");
+            setTimeout(() => {
+                inputTimeout("alphabetical", "DEL");
+            }, 100);
+            return;
+        } else if (e == "delete") {
+            inputRegister("alphabetical", "CLR");
+            setTimeout(() => {
+                inputTimeout("alphabetical", "CLR");
+            }, 100);
+            return;
+        }
+
+        if (!isNaN(e.key)) {
+            type = "numerical";
+        } else {
+            type = "alphabetical";
+        }
+
+        inputRegister(type, e.toUpperCase());
+        setTimeout(() => {
+            inputTimeout(type, e.toUpperCase());
+        }, 100);
+    })
 
     initDisplay(k);
     initModes(k);
