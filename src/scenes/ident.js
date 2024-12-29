@@ -10,6 +10,19 @@ export default function identScene(k) {
         setTitle("IDENT");
         setPage(0,0)
 
+        k.add([
+            k.text(`
+IDENT
+
+Shows details about the aircraft. This is the default page
+that is shown after the FMS is initialized.
+                `, {
+                    font: "Arial",
+                    size: 18,
+                }),
+            k.pos(600, 100)
+        ])
+
         setLineText("left", 1, "MODEL", "737-800")
         setLineText("left", 2, "NAV DATA", "AIRAC-0304")
         setLineText("left", 4, "OP PROGRAM", "PMDG 737NG SU2")
