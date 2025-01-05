@@ -33,7 +33,7 @@ It is recommended that you have a basic background in aviation to understand how
             k.anchor("top")
         ]);
         const noticeText = k.add([
-            k.text("This project is optimised only for 16:9 (laptop/desktop) 1080p displays and is not designed with mobile friendliness in mind.", {
+            k.text("Designed for 16:9 1080p displays. Please note that this simulator has text rendering issues and will be fixed later.", {
                 font: "arial",
                 size: 30,
                 width: 480
