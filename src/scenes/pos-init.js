@@ -8,15 +8,15 @@ export function posInit1Scene(k) {
         clearLines();
 
         setTitle("POS INIT");
-        setPage(1,3)
+        setPage(1,3);
 
-        setLineText("left", 1, " GW/CRZ CG", "---.-/ 5.0")
-        setLineText("left", 2, " REF AIRPORT", "----")
-        setLineText("left", 3, " GATE", "-----")
-        setLineText("left", 5, " GMT-MON/DY", "---")
+        setLineText("left", 1, " GW/CRZ CG", "---.-/ 5.0");
+        setLineText("left", 2, " REF AIRPORT", "----");
+        setLineText("left", 3, " GATE", "-----");
+        setLineText("left", 5, " GMT-MON/DY", "---");
         
-        setLineText("right", 1, "LAST POS", "N47°15.6 E011°20.5")
-        setLineText("right", 4, "SET IRS POS", "---°--.- ----°--.-")
+        setLineText("right", 1, "LAST POS", "N47°15.6 E011°20.5");
+        setLineText("right", 4, "SET IRS POS", "---°--.- ----°--.-");
         
         setLineText("left", 6, "-----------------", "<INDEX")
         const toINDEX = handleInput(() => {
@@ -25,6 +25,10 @@ export function posInit1Scene(k) {
         });
 
         setLineText("right", 6, "-----------------", "ROUTE>")
+        const toROUTE = handleInput(() => {
+            k.go("route-1");
+            lineSelectKeyTimeout("right", 6);
+        });
 
         const pageNext = handleInput(() => {
             k.go("pos-init-2");
@@ -33,6 +37,7 @@ export function posInit1Scene(k) {
 
         k.onUpdate(() => {
             toINDEX(input.line.left[6]);
+            toROUTE(input.line.right[6]);
             pageNext(input.mode["NEXT\nPAGE"]);
         });
     });
@@ -44,21 +49,21 @@ export function posInit2Scene(k) {
         clearLines();
 
         setTitle("POS REF");
-        setPage(2,3)
+        setPage(2,3);
 
-        setLineText("left", 1, " FMC POS", "")
-        setLineText("left", 2, " IRS L", "")
-        setLineText("left", 3, " IRS R", "")
+        setLineText("left", 1, " FMC POS", "");
+        setLineText("left", 2, " IRS L", "");
+        setLineText("left", 3, " IRS R", "");
 
         setLineText("left", 4, " GPS L", "MEMES")
         const copyGPS = handleInput(() => {
             scratchpadCopy("left", 4)
-        })
+        });
 
-        setLineText("left", 5, " GPS R", "")
-        setLineText("left", 6, " RADIO", "")
+        setLineText("left", 5, " GPS R", "");
+        setLineText("left", 6, " RADIO", "");
         
-        setLineText("right", 1, "GS", "")
+        setLineText("right", 1, "GS", "");
         
         // Handles changing of pages
         const pagePrev = handleInput(() => {
@@ -76,6 +81,6 @@ export function posInit2Scene(k) {
 
             pagePrev(input.mode["PREV\nPAGE"])
             pageNext(input.mode["NEXT\nPAGE"])
-        })
+        });
     });
 };
