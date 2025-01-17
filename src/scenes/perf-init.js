@@ -10,17 +10,17 @@ export default function perfInitScene(k) {
         setTitle("PERF INIT");
         setPage(1,2)
 
-        setLineText("left", 1, " GW/CRZ CG", "---.-/ 5.0")
-        setLineText("left", 2, " PLAN/FUEL", "/ 4.8")
-        setLineText("left", 3, " ZFW", "---.-")
-        setLineText("left", 4, " RESERVES", "--.-")
-        setLineText("left", 5, " COST INDEX", "---")
+        setLineText("left", 1, " GW/CRZ CG", "▯▯▯.▯/ 15.0%")
+        setLineText("left", 2, " FUEL", "4.8")
+        setLineText("left", 3, " ZFW", "▯▯▯.▯")
+        setLineText("left", 4, " RESERVES", "▯▯.▯")
+        setLineText("left", 5, " COST INDEX", "▯▯▯")
         const addCostIndex = handleInput(() => {
             scratchpadInsert("left", 5)
             lineSelectKeyTimeout("left", 5)
         })
         
-        setLineText("right", 1, "TRIP/CRZ ALT", "-----")
+        setLineText("right", 1, "TRIP/CRZ ALT", "▯▯▯▯▯")
         setLineText("right", 2, "CRZ WIND", "---°/---")
         setLineText("right", 5, "TRANS ALT", "5000")
         
