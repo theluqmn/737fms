@@ -9,7 +9,7 @@
 		"zip": "npm run build && mkdir -p dist && zip -r dist/game.zip dist -x \"**/.DS_Store\""
 	},
 	"dependencies": {
-		"kaplay": "^3001.0.6"
+		"kaplay": "^3001.0.9"
 	},
 	"devDependencies": {
 		"@types/node": "^22.10.2",
