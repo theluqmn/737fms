@@ -16,7 +16,7 @@ export function posInit1Scene(k) {
         setLineText("left", 5, " GMT-MON/DY", "---");
         
         setLineText("right", 1, "LAST POS", "N47°15.6 E011°20.5");
-        setLineText("right", 4, "SET IRS POS", "---°--.- ----°--.-");
+        setLineText("right", 4, "SET IRS POS", "▯▯▯°▯▯.▯ ▯▯▯▯°▯▯.▯");
         
         setLineText("left", 6, "-----------------", "<INDEX")
         const toINDEX = handleInput(() => {
