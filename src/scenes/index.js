@@ -14,15 +14,13 @@ export default function indexScene(k) {
             k.text(`
 INDEX
 
-A list of all the available index pages.
+An index of all the available pages.
 
 Ones that are functioning (opens the respective page):
 - IDENT
+- POS
 - PERF
-
-WARNING: The PERF page is extremely buggy due to an
-issue with kaplayjs. Visiting the page will wreak havoc
-on the display's texts.
+- TAKEOFF
                 `, {
                     font: "Arial",
                     size: 18,
@@ -37,6 +35,10 @@ on the display's texts.
         })
 
         setLineText("left", 2, "", "<POS")
+        const toPOS = handleInput(() => {
+            k.go("pos-init-1")
+            lineSelectKeyTimeout("left", 2)
+        })
 
         setLineText("left", 3, "", "<PERF")
         const toPERF = handleInput(() => {
@@ -45,6 +47,11 @@ on the display's texts.
         })
         
         setLineText("left", 4, "", "<TAKEOFF")
+        const toTAKEOFF = handleInput(() => {
+            k.go("takeoff")
+            lineSelectKeyTimeout("left", 4)
+        })
+
         setLineText("left", 5, "", "<APPROACH")
         setLineText("left", 6, "", "<OFFSET")
 
@@ -54,7 +61,9 @@ on the display's texts.
 
         k.onUpdate(() => {
             toIDENT(input.line.left[1])
+            toPOS(input.line.left[2])
             toPERF(input.line.left[3])
+            toTAKEOFF(input.line.left[4])
         })
     });
 };

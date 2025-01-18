@@ -26,6 +26,9 @@ export function initModes(k) {
     })
 
     modeKeys(k, 190, 490, 1, "RTE");
+    const route = handleInput(() => {
+        k.go("route-1")
+    })
     modeKeys(k, 254, 490, 1, "CLB");
     modeKeys(k, 318, 490, 1, "CRZ");
     modeKeys(k, 382, 490, 1, "DES");
@@ -46,6 +49,10 @@ export function initModes(k) {
     modeKeys(k, 466, 530, 1, "EXEC");
 
     modeKeys(k, 126, 570, 2, "N1\nLIMIT");
+    const n1Limit = handleInput(() => {
+        k.go("n1-limit")
+    })
+    
     modeKeys(k, 190, 570, 1, "FIX");
 
     modeKeys(k, 126, 610, 2, "PREV\nPAGE");
@@ -53,5 +60,7 @@ export function initModes(k) {
 
     k.onUpdate(() => {
         initRef(input.mode["INIT\nREF"])
+        route(input.mode["RTE"])
+        n1Limit(input.mode["N1\nLIMIT"])
     })
 }

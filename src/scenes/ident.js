@@ -34,11 +34,13 @@ The bottom part the display is reserved for the scratchpad.
 Try typing using the keyboard on the FMS - the text will be
 stored in the scratchpad. In pages where you are required to
 enter data, simply type the data in the scratchpad and press
-the corresponding LKS to enter the data. On lines with LSKs
+the corresponding LSK to enter the data. On lines with LSKs
 that does not have a function, or lines that is output-only,
 the text can be copied to the scratchpad by pressing its LSK.
 Use the SP key to add spaces, DEL key to delete characters,
 and CLR to clear the scratchpad.
+
+You can also use your keyboard to enter data.
                 `, {
                     font: "Arial",
                     size: 18,
