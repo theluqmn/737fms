@@ -16,4 +16,4 @@ identScene(k); indexScene(k); perfInitScene(k);
 posInit1Scene(k); posInit2Scene(k);
 n1LimitScene(k); routeScene(k);
 
-k.go("route-1");
+k.go("ident");
