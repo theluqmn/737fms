@@ -1,7 +1,6 @@
 import FMS from "../functions/fms";
 import { setTitle, setPage, setLineText, clearLines} from "../functions/displayEngine";
 import { input, handleInput, lineSelectKeyTimeout } from "../functions/inputEngine";
-import { assistantIndicateLSK } from "../components/assistant";
 
 export default function identScene(k) {
     k.scene("ident", () => {
@@ -66,8 +65,6 @@ and CLR to clear the scratchpad.
             k.go("pos-init-1")
             lineSelectKeyTimeout("right", 6)
         })
-
-        assistantIndicateLSK(k, "right", 1)
 
         k.onUpdate(() => {
             toINDEX(input.line.left[6])
