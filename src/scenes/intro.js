@@ -33,9 +33,9 @@ It is recommended that you have a basic background in aviation to understand how
             k.anchor("top")
         ]);
         const noticeText = k.add([
-            k.text("Designed for 16:9 1080p displays. Please note that this simulator has text rendering issues and will be fixed later.", {
+            k.text("Designed for 16:9 1080p displays and is not optimized for mobile devices. A work in progress - certain features may not work as intended!", {
                 font: "arial",
-                size: 30,
+                size: 28,
                 width: 480
             }),
             k.pos(300, 415),
@@ -88,7 +88,8 @@ It is recommended that you have a basic background in aviation to understand how
             k.rect(500, 50),
             k.pos(300, 680),
             k.color(255, 255, 255),
-            k.anchor("top")
+            k.anchor("top"),
+            k.area()
         ]);
         const tutorialText = k.add([
             k.text("YouTube Tutorial", {
@@ -110,5 +111,9 @@ It is recommended that you have a basic background in aviation to understand how
         githubButton.onHover(() => { githubButton.color = k.rgb(225,225,225) });
         githubButton.onHoverEnd(() => { githubButton.color = k.rgb(255,255,255) });
         githubButton.onClick(() => { window.open("https://github.com/theluqmn/737fms") });
+
+        tutorialButton.onHover(() => { tutorialButton.color = k.rgb(225,225,225) });
+        tutorialButton.onHoverEnd(() => { tutorialButton.color = k.rgb(255,255,255) });
+        tutorialButton.onClick(() => { window.open("https://www.youtube.com/watch?v=T2EmaW7Q5vU&t=208s") });
     });
 }

@@ -18,4 +18,4 @@ posInit1Scene(k); posInit2Scene(k);
 n1LimitScene(k); routeScene(k);
 takeoffScene(k);
 
-k.go("takeoff");
+k.go("intro");
